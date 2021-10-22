@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   description: |
-    AEM Forms as a Cloud Service - Communications.
+    AEM Forms as a Cloud Service - Communications
 
     # Introduction
     Communications APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enables you to create applications that let you:

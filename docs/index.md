@@ -1,41 +1,68 @@
-## Welcome to GitHub Pages
+---
+title: Adobe Experience Manager Forms Communications APIs
+description: A collection of high-level references for all endpoints provided by Adobe Experience Manager Forms Communications.
+keywords: 
+  - Experience Manager Forms Communications
+  - Communications
+  - API Documentation
+  - HTTP
+  - REST
+---
 
-You can use the [editor on GitHub](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<Hero slots="heading, text"/> 
 
-You can use the [batch.yaml](../src/swagger-specs/batch.yaml)
+# Adobe Experience Manager Forms Communications
 
-You can use the [sync.yaml](../src/swagger-specs/sync.yaml)
+Experience Manager Forms Communications provide HTTP APIs that allow you to programmatically perform key operations in your applications.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<Resources slots="heading, links"/>
 
-### Markdown
+#### Resources
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* [Experience Manager Forms Documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
 
-```markdown
-Syntax highlighted code block
+## Overview
 
-# Header 1
-## Header 2
-### Header 3
+Communications allows you to create, assemble, and deliver brand-oriented and personalized communications such as business correspondences, documents, statements, claim processing letters, benefit notices, claim processing letters, monthly bills, and welcome kits. You can use Communications APIs to combine a template (XFA or PDF) with customer data to generate documents in PDF, PS, PCL, and ZPL formats.
 
-- Bulleted
-- List
+Communications provide APIs for on-demand and scheduled document generation. You can use synchronous APIs for on-demand and batch APIs (asynchronous APIs) for scheduled document generation:
 
-1. Numbered
-2. List
+* Synchronous APIs are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
 
-**Bold** and _Italic_ and `Code` text
+* Batch APIs (Asynchronous APIs) are suitable for scheduled high throughput, scheduled, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
 
-[Link](url) and ![Image](src)
-```
+## Discover 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<DiscoverBlock slots="heading, link, text"/>
 
-### Jekyll Themes
+### Get Started
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html)
+    
+Follow this tutorial to gather the required authentication credentials for all Experience Platform APIs (except for the Privacy Service API and Reactor API).
 
-### Support or Contact
+<DiscoverBlock slots="link, text"/>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[Authenticate and access the Privacy Service API](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/getting-started.html)
+    
+Follow this tutorial to gather the required authentication credentials the Privacy Service API.
+
+<DiscoverBlock slots="link, text"/>
+
+[Authenticate and access the Reactor API](https://experienceleague.adobe.com/docs/experience-platform/tags/api/getting-started.html)
+    
+Follow this tutorial to gather the required authentication credentials for the Reactor API.
+
+<DiscoverBlock slots="heading, link, text"/>
+
+### API References
+
+[Syncronous API](../src/swagger-specs/sync.yaml) 
+
+create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
+
+<DiscoverBlock slots="link, text"/>
+
+[Batch API](../src/swagger-specs/batch.yaml) 
+
+Learn to create and run communication APIs in batch mode to generate multiple communications at scheduled intervals for printing and digital deliveries.

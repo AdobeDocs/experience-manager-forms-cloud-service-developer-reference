@@ -55,7 +55,7 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 <DiscoverBlock slots="heading, link, text"/>
 
-### Syncronous API References
+### API References
 
 [Syncronous API](references/sync.md) 
 

@@ -1,84 +1,68 @@
 ---
-title: Overview - Adobe Analytics
-description: This is the overview page of Adobe Analytics
-contributors:
-  - https://github.com/icaraps 
+title: Adobe Experience Manager Forms Communications APIs
+description: A collection of high-level references for all endpoints provided by Adobe Experience Manager Forms Communications.
+keywords: 
+  - Experience Manager Forms Communications
+  - Communications
+  - API Documentation
+  - HTTP
+  - REST
 ---
 
 <Hero slots="heading, text"/> 
 
-# Adobe Analytics API
+# Adobe Experience Manager Forms Communications
 
-Adobe Product API offers limitless ways to integrate your most important customer data into key business processes. Adobe Product API offer limitless ways.
+Experience Manager Forms Communications provide HTTP APIs that allow you to programmatically perform key operations in your applications.
 
 <Resources slots="heading, links"/>
 
 #### Resources
 
-* [Quickstart Guide](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
-* [Adobe Analytics Github Repo](https://github.com/AdobeDocs/analytics-2.0-apis)
+* [Experience Manager Forms Documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
 
 ## Overview
 
-This documentation provides instructions for Adobe Analytics 2.0 APIs. For working with Analytics 1.4 APIs, see [Analytics 1.4 API Documentation](https://github.com/AdobeDocs/analytics-1.4-apis).
+Communications allows you to create, assemble, and deliver brand-oriented and personalized communications such as business correspondences, documents, statements, claim processing letters, benefit notices, claim processing letters, monthly bills, and welcome kits. You can use Communications APIs to combine a template (XFA or PDF) with customer data to generate documents in PDF, PS, PCL, and ZPL formats.
 
-The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. 
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+Communications provide APIs for on-demand and scheduled document generation. You can use synchronous APIs for on-demand and batch APIs (asynchronous APIs) for scheduled document generation:
+
+* Synchronous APIs are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
+
+* Batch APIs (Asynchronous APIs) are suitable for scheduled high throughput, scheduled, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
 
 ## Discover 
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
+<DiscoverBlock slots="heading, link, text"/>
 
 ### Get Started
 
-[Quickstart Guide](guides/)
+[Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html)
     
-Get started with the Adobe Analytics APIs.
-
-<DiscoverBlock slots="heading, link, text"/> 
-
-### Guides
-
-[Calculated Metrics API](guides/calculated_metrics_api/) 
-     
-Returns information on the user's company that is necessary for making other Adobe Analytics API calls.
+Follow this tutorial to gather the required authentication credentials for all Experience Platform APIs (except for the Privacy Service API and Reactor API).
 
 <DiscoverBlock slots="link, text"/>
 
-[Segments API](guides/segments_api/) 
-
-Provides configuration guidance and best practices for the /segments endpoint.
-
-<DiscoverBlock slots="link, text"/>
-
-[Reporting Guide API](guides/reporting_api/)
-
-Provides configuration guidance and best practices for the /reports endpoint.
+[Authenticate and access the Privacy Service API](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/getting-started.html)
+    
+Follow this tutorial to gather the required authentication credentials the Privacy Service API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Migrating from 1.4 to 2.0](guides/migrating/)
+[Authenticate and access the Reactor API](https://experienceleague.adobe.com/docs/experience-platform/tags/api/getting-started.html)
+    
+Follow this tutorial to gather the required authentication credentials for the Reactor API.
 
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.   
+<DiscoverBlock slots="heading, link, text"/>
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
+### Syncronous API References
 
-### API References
+[Syncronous API](references/access-control.md) 
 
-[Try the API](api/) 
+create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
 
-Try the Analytics API with Swagger UI. Explore, make calls, with full endpoint descriptions.
+<DiscoverBlock slots="link, text"/>
 
-## Contributing 
+[Batch API](references/batch.md) 
 
-We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull 
-request with your contribution. For more information, refer to the [contributing page](support/contribute/).
-
-## API Requests & Rate Limits
-
-The timeout for API requests through adobe.io is currently *60 seconds*.
-
-The default rate limit for an Adobe Analytics Company is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`    
+Learn to create and run communication APIs in batch mode to generate multiple communications at scheduled intervals for printing and digital deliveries.

@@ -6,6 +6,6 @@ keywords:
   - Experience Manager Forms Communications
   - Communications
   - API Documentation
-  - HTTP
   - REST
+  - HTTP
 --- 

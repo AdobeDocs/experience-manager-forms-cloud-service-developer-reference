@@ -152,5 +152,6 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/experience-manager-forms-cloud-service-developer-reference/'
+  pathPrefix: process.env.PATH_PREFIX || '/experience-manager-forms-cloud-service/'
+
 };

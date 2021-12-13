@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "dev-site-documentation-template",
+  "name": "experience-manager-forms-cloud-service",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/dev-site-documentation-template"
+    "url": "https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference"
   },
   "author": {
     "name": "Stephan Ringel",

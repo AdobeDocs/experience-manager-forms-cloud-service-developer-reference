@@ -12,9 +12,15 @@
 
 module.exports = {
   siteMetadata: {
+    versions: [
+      {
+        title: '1.0',
+        selected: fa
+      }
+    ],
     pages: [
       {
-        title: 'Home',
+        title: 'Communications',
         path: '/'
       },
       {

@@ -20,7 +20,7 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Communications',
+        title: 'Communications2',
         path: '/'
       },
       {
@@ -102,18 +102,6 @@ module.exports = {
       {
         title: 'Discovery API',
         path: '/guides/discovery_api/'
-      },
-      {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
-      },
-      {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
-      },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
       },
       {
         title: 'Overview',

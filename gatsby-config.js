@@ -20,10 +20,6 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Forms Cloud Service',
-        path: '/'
-      },
-      {
         title: 'Guides',
         path: '/guides/'
       },

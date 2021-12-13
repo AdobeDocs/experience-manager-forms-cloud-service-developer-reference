@@ -12,12 +12,6 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: 'Components',
-        selected: false
-      }
-    ],
     pages: [
       {
         title: 'Home',

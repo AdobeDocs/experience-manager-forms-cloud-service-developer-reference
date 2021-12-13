@@ -14,17 +14,13 @@ module.exports = {
   siteMetadata: {
     versions: [
       {
-        title: 'v2.0',
+        title: 'Communications',
         selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
       }
     ],
     pages: [
       {
-        title: 'Adobe Analytics',
+        title: 'Communications',
         path: '/'
       },
       {
@@ -34,13 +30,13 @@ module.exports = {
       {
         title: 'API Reference',
         menu: [{
-          title: 'API Reference v2.0',
-          description: 'Adobe Analytics Reporting API',
+          title: 'Sync API Reference',
+          description: 'Communications Sync APIs',
           path: '/api/index.md'
         }, {
-          title: 'API Reference v1.4',
-          description: 'API Spec for the Adobe Marketing Cloud',
-          path: '/api/1.4.md'
+          title: 'Batch API Reference',
+          description: 'Communications Batch APIs',
+          path: '/api/sync.md'
         }]
       },
       {

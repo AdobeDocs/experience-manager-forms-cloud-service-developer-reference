@@ -14,11 +14,15 @@ module.exports = {
   siteMetadata: {
     versions: [
       {
-        title: 'Communications',
-        selected: true
+        title: 'Components',
+        selected: false
       }
     ],
     pages: [
+      {
+        title: 'Home',
+        path: '/'
+      },
       {
         title: 'Guides',
         path: '/guides/'

@@ -15,7 +15,7 @@ module.exports = {
     versions: [
       {
         title: '1.0',
-        selected: fa
+        selected: true
       }
     ],
     pages: [

@@ -20,7 +20,7 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Communications2',
+        title: 'Forms Cloud Service',
         path: '/'
       },
       {
@@ -30,13 +30,13 @@ module.exports = {
       {
         title: 'API Reference',
         menu: [{
-          title: 'Sync API Reference',
-          description: 'Communications Sync APIs',
-          path: '/api/index.md'
-        }, {
           title: 'Batch API Reference',
           description: 'Communications Batch APIs',
           path: '/api/sync.md'
+        }, {
+          title: 'Sync API Reference',
+          description: 'Communications Sync APIs',
+          path: '/api/index.md'
         }]
       },
       {

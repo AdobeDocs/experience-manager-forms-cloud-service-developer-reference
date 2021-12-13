@@ -19,7 +19,7 @@ Experience Manager Forms Communications provide HTTP APIs that allow you to prog
 
 #### Resources
 
-* [Experience Manager Forms Documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [Adobe Experience Manager Forms Communications](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)
 
 ## Overview
 
@@ -39,7 +39,7 @@ Communications provide APIs for on-demand and scheduled document generation. You
 
 [Syncronous API](../src/pages/api/sync.md)
 
-create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
+Create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 

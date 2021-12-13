@@ -57,12 +57,12 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 ### API References
 
-[Syncronous API](../src/pages/api/sync.yaml) 
+[Syncronous API](../src/pages/api/sync.md)
 
 create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 
-[Batch API](../src/pages/api/index.md) 
+[Batch API](../src/pages/api/index.md)
 
 Learn to create and run communication APIs in batch mode to generate multiple communications at scheduled intervals for printing and digital deliveries.

@@ -12,12 +12,6 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: '1.0',
-        selected: true
-      }
-    ],
     pages: [
       {
         title: 'Communications',
@@ -26,12 +20,12 @@ module.exports = {
       {
         title: 'API Reference',
         menu: [{
-          title: 'Batch API Reference',
-          description: 'Communications Batch APIs',
-          path: '/api/sync.md'
-        }, {
           title: 'Sync API Reference',
           description: 'Communications Sync APIs',
+          path: '/api/sync.md'
+        }, {
+          title: 'Batch API Reference',
+          description: 'Communications Batch APIs',
           path: '/api/index.md'
         }]
       },

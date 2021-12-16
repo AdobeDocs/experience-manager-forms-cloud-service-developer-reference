@@ -35,7 +35,7 @@ Communications provide APIs for on-demand and scheduled document generation. You
 
 <DiscoverBlock slots="heading, link, text"/>
 
-### Get Started
+<!-- ### Get Started
 
 [Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html)
     
@@ -53,7 +53,7 @@ Follow this tutorial to gather the required authentication credentials the Priva
     
 Follow this tutorial to gather the required authentication credentials for the Reactor API.
 
-<DiscoverBlock slots="heading, link, text"/>
+<DiscoverBlock slots="heading, link, text"/> -->
 
 ### API References
 

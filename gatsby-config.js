@@ -26,7 +26,7 @@ module.exports = {
         }, {
           title: 'Batch API Reference',
           description: 'Communications Batch APIs',
-          path: '/api/index.md'
+          path: '/api/batch.md'
         }]
       },
       {

@@ -9,7 +9,7 @@ keywords:
   - REST
 ---
 
-<Hero slots="heading, text"/> 
+<!-- <Hero slots="heading, text"/> 
 
 # Adobe Experience Manager Forms Communications
 
@@ -45,4 +45,4 @@ Create and run communication APIs to merge XDP and PDF templates with XML data t
 
 [Batch API](../src/pages/api/index.md)
 
-Learn to create and run communication APIs in batch mode to generate multiple communications at scheduled intervals for printing and digital deliveries.
+Learn to create and run communication APIs in batch mode to generate multiple communications at scheduled intervals for printing and digital deliveries. -->

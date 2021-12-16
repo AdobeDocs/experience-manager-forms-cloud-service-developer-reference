@@ -59,7 +59,7 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 [Syncronous API](references/sync.md) 
 
-create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
+Create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 

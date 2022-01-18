@@ -1,33 +1,22 @@
 openapi: 3.0.3
 info:
   description: |
-    AEM Forms as a Cloud Service - Communications
-
+    AEM Forms as a Cloud Service - Communications.
     # Introduction
     Communications APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enables you to create applications that let you:
-
     - Generate documents by populating template files with XML data. For example, receipts, bills, and statements.
     - Generate forms in various formats, including non-interactive PDF print streams.
     - Generate print PDFs from XFA form PDFs.
     - Generate PDF, PostScript, PCL, and ZPL documents in bulk by merging multiple sets of data with source templates.
-
     These APIs help generate documents in bulk and asynchronous mode. You can configure various parameters for the conversion and then start the batch process.
-
     You can find out more about various use cases and considerations of Communications APIs in the [Communications Overview](https://www.adobe.com/go/learn_aemformscs_communications_en) document.
-
-    # Before you start using a bath operation
+    # Before you start using a batch operation
     Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
-
-    # Set up Communicaions
-    Contact formscsbeta@adobe.com to enable AEM Forms as a Cloud Service - Communications for your organization. Send name of your organization, program details, and email address of your AEM as a Cloud Service administrator. Also, set up a [local development environment](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html) to test and develop the functionality using Communication APIs locally.
-
     # Known issues and considerations
-
     - Ensure that the size of the template and XCI configuration files is larger than 16KB.
     - Ensure that the data xml file does not contain the XML declaration header. For example, <?xml version="1.0" encoding="UTF-8"?>
-    - Do not modify the Data Source USC Configuration/Azure Cloud Configuration used in a batch configuration while the batch is being executed. Even after execution, if any update is required, create a copy of configuration instead of updating the one used in an existing batch configuration. 
+    - Do not modify the Data Source USC Configuration/Azure Cloud Configuration used in a batch configuration while the batch is being run. Even after execution, if any update is required, create a copy of configuration instead of updating the one used in an existing batch configuration. 
     - Adobe recommends to host data files blob container store in the cloud region used by AEM Cloud Service.
-
   title: AEM Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
@@ -244,7 +233,7 @@ paths:
     get:
       tags:
         - Batch Execution
-      summary: Get state of all batch instances being executed
+      summary: Get state of all batch instances being run
       operationId: GetAllRunningInstancesForBatch
       parameters:
         - $ref: "#/components/parameters/ConfigName"

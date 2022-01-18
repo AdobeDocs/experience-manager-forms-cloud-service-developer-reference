@@ -2,38 +2,21 @@
 openapi: 3.0.0
 info:
   description: |
-    AEM Forms as a Cloud Service - Communications APIs
-
+    AEM Forms as a Cloud Service - Communications 
     # Introduction
-
     Communications APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enable you to create applications that let you:
-
     - Generate documents by populating template files with XML data. For example, receipts, bills, and statements.    
-
     - Generate forms in various formats, including non-interactive PDF print
     streams.
-
     - Generate print PDFs from XFA form PDFs.
-
     - Generate PDF, PostScript, PCL, and ZPL documents in bulk by merging
     multiple sets of data with source templates.
-
-
     You can find out more about document generation at
-
     [AEM Forms as a Cloud Service - Communications
     Overview](https://www.adobe.com/go/learn_aemformscs_communications_en)
-
     # Before you start
-
     Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
-
-    # Set up Communicaions APIs
-
-    Contact formscsbeta@adobe.com to enable Communications APIs for your organization. Send name of your organization, program details, and email address of your AEM as a Cloud Service administrator. Also, set up a [local development environment](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html) to test and develop the functionality using Communication APIs locally. 
-
     <SecurityDefinitions />
-
   title: AEM Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
@@ -227,7 +210,7 @@ components:
         template:
           description: |
             The template defines appearance and behavior of the PDF document.
-            The API supports templates of format: XDP, Acrobat Form, and PDF
+            The API supports templates of format: XDP, Acrobat Forms, and PDF
             document. You can specify a fully qualified path, reference path of
             your AEM Repository, or path of a binary file.
           oneOf:
@@ -286,6 +269,9 @@ components:
           type: string
           description: Specify locale/language for the output document.
           default: "en"
+        contentRoot:
+          type: string
+          description: Location of template resources (images, fragments, etc.).
         copies:
           type: integer
           description: Sets the number of copies to print. The default number is 1.
@@ -311,6 +297,9 @@ components:
           type: string
           description: Locale in which pdf should be rendered.
           default: "en"
+        contentRoot:
+          type: string
+          description: Location of template resources (images, fragments, etc.).
         isTagged:
           type: boolean
           description: Specify if the PDF document can be tagged.
@@ -353,10 +342,8 @@ components:
     PDFOutput:
       allOf:
       - $ref: '#/components/schemas/Generate'
-      - required:
-        - options
-        type: object
-        properties:
+      - type: object
+      - properties:
           options:
             $ref: '#/components/schemas/PDFOutputOptions'
   responses:
@@ -448,22 +435,17 @@ components:
         In token-based authentication, an access token (Bearer authentication token) is required to make requests to AEM as a Cloud Service.
         AEM Forms as a Cloud Service provides APIs to securely retrieve the access token.
         The end-to-end workflow for retrieving and using the token to authenticate a request is:
-
         - [Retrieve AEM as a Cloud Service credentials from the Developer
         Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-
         - [Install AEM as a Cloud Service credentials on your
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
         (Application Server, Web Server, or other non-AEM servers) configured to
         send requests to (make calls) the cloud service.
-
         - [Generate a JWT token and exchanged it with Adobe IMS APIs for an
         access
         token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
-
         - Run the AEM API with the access token as a Bearer Authentication
         token.
-
         - [Set appropriate permissions for the technical account user in the AEM
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
     Basic authentication:

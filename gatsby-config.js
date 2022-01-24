@@ -27,6 +27,10 @@ module.exports = {
           title: 'Batch API Reference',
           description: 'Communications Batch APIs',
           path: '/api/batch.md'
+        }, {
+          title: 'Batch API Reference',
+          description: 'Communications Batch APIs',
+          path: '/api/assembler-sync.md'
         }]
       },
       {

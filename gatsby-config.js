@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        title: 'Communications',
+        title: 'Home',
         path: '/'
       },
       {

@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager Forms APIs
-description: A collection of high-level references for all endpoints provided by Adobe Experience Manager Forms Communications.
+title: Adobe Experience Manager Forms Cloud Service APIs
+description: A collection of high-level references for all endpoints provided by Adobe Experience Manager Forms Cloud Service.
 keywords: 
   - Experience Manager Forms Communications
   - Communications
@@ -12,9 +12,9 @@ keywords:
 
 <Hero slots="heading, text"/> 
 
-# Adobe Experience Manager Forms Communications
+# Adobe Experience Manager Forms Cloud Service
 
-Experience Manager Forms Communications provide HTTP APIs that allow you to programmatically perform key operations in your applications.
+Experience Manager Forms Cloud Service provide HTTP APIs that allow you to programmatically perform key operations in your applications.
 
 <Resources slots="heading, links"/>
 
@@ -76,5 +76,5 @@ Learn to create and run communication APIs in batch mode to generate multiple co
 
 [Assembler Syncronous API](references/assembler-sync.md) 
 
-Learn to create and run Assembler APIs to combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. Each job submitted to the Assembler service includes a Document Description XML (DDX) document, source documents, and external resources (strings and graphics).
+Learn to create and run Assembler APIs to combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. 
 

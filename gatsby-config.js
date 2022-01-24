@@ -20,16 +20,16 @@ module.exports = {
       {
         title: 'API Reference',
         menu: [{
-          title: 'Sync API Reference',
-          description: 'Communications Sync APIs',
+          title: 'Communications Sync APIs',
+          description: 'Communications Sync APIs Reference',
           path: '/api/sync.md'
         }, {
-          title: 'Batch API Reference',
-          description: 'Communications Batch APIs',
+          title: 'Communications Batch APIs',
+          description: 'Communications Batch APIs Reference',
           path: '/api/batch.md'
         }, {
-          title: 'Batch API Reference',
-          description: 'Communications Batch APIs',
+          title: 'Assembler Batch APIs',
+          description: 'Communications Batch APIs Reference',
           path: '/api/assembler-sync.md'
         }]
       },

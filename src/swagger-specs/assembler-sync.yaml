@@ -1,0 +1,537 @@
+openapi: 3.0.3
+info:
+  description: |
+    AEM Forms as a Cloud Service - Assembler sync HTTP APIs.
+
+    # Introduction
+    Assembler APIs lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. Each job submitted to the Assembler includes a Document Description XML (DDX) document, source documents, and external resources (strings and graphics). The DDX document provides instructions on how to use the source documents to produce a set of resultant documents. It enables you to create applications that let you:
+
+    - Converts PDF documents to PDF/A standard.
+    - Transforms PDFs and PDF forms (created in Acrobat) to PDF/A-1b, PDF/A-2b, and PDFA/A-3b.
+    - Validates the compliance of a PDF/A file and converts it if necessary.
+
+    You can find out more information about Assembler at
+
+    [Overrview of AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-64/forms/use-document-services/overview-aem-document-services.html?lang=en#)
+
+    # Before you start
+    Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
+
+    # Set up Assembler APIs
+    Contact formscsbeta@adobe.com to enable Assembler APIs for your organization. Send name of your organization, program details, and email address of your AEM as a Cloud Service administrator. Also, set up a [local development environment](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html) to test and develop the functionality using Assembler APIs locally.
+
+  title: AEM FaaCS - Assembler sync HTTP APIs
+  version: 0.0.1
+
+servers:
+  - url: https://author-p8857-e10452-cmstg.adobeaemcloud.com
+tags:
+  - name: Assembler sync HTTP APIs
+    description: Assembler Services Capabilities
+externalDocs:
+  description: Find out more
+  url: https://experienceleague.adobe.com/docs/experience-manager-64/forms/use-document-services/overview-aem-document-services.html?lang=en#
+paths:
+  /adobe/forms/assembler/ddx/invoke:
+    post:
+      tags:
+        - DDX execution
+      summary: Executes the DDX on the given input documents and returns an object containing the result documents
+      operationId: InvokeDDX
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/InvokeAssemblerRequest'
+
+      responses:
+        '200':
+          $ref : '#/components/responses/InvokeDDXSuccess'
+        '400':
+          $ref : '#/components/responses/BadRequestDDX'
+        '401':
+          $ref: '#/components/responses/UnauthorizedDDX'
+        '500':
+          $ref : '#/components/responses/InternalServerDDX'
+
+  /adobe/forms/assembler/pdfa/convert:
+    post:
+      tags:
+        - Document conversion
+      summary: Converts a given document to PDF/A using the options specified
+      operationId: ConvertToPDFA
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ToPDFARequest'
+
+      responses:
+        '200':
+          $ref : '#/components/responses/ToPDFASuccess'
+        '400':
+          $ref : '#/components/responses/BadRequestToPDFA'
+        '401':
+          $ref: '#/components/responses/UnauthorizedToPDFA'
+        '500':
+          $ref : '#/components/responses/InternalServerToPDFA'
+
+  /adobe/forms/assembler/pdfa/validate:
+    post:
+      tags:
+        - Document validation
+      summary: Validates a given document is PDF/A according to the options specified
+      operationId: CheckIsPDFA
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/IsPDFARequest'
+
+      responses:
+        '200':
+          $ref : '#/components/responses/IsPDFASuccess'
+        '400':
+          $ref : '#/components/responses/BadRequestIsPDFA'
+        '401':
+          $ref: '#/components/responses/UnauthorizedIsPDFA'
+        '500':
+          $ref : '#/components/responses/InternalServerIsPDFA'
+
+components:
+  schemas:
+    InvokeAssemblerRequest:
+      type: object
+      required:
+        - "ddx"
+        - "sourceDocument"
+      properties:
+        ddx:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: Document Description XML document which provides instructions on how to use the source documents to produce a set of result documents.
+        sourceDocument:
+          description: Logical name of input document which is being referenced in the DDX and the values being inline input document or a url
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+        options:
+          $ref: '#/components/schemas/AssemblerOptionSpec'
+
+    ToPDFARequest:
+      type: object
+      required:
+        - "inDoc"
+      properties:
+        inDoc:
+          $ref: '#/components/schemas/Document'
+        options:
+          $ref: '#/components/schemas/ToPDFAConversionOptionSpec'
+
+    IsPDFARequest:
+      type: object
+      required:
+        - "inDoc"
+      properties:
+        inDoc:
+          $ref: '#/components/schemas/Document'
+        options:
+          $ref: '#/components/schemas/IsPDFAConversionOptionSpec'
+
+    Document:
+      oneOf:
+        - type: string
+          format: binary
+        - type: string
+      description: The input document which can be a url or inline document.
+
+    AssemblerOptionSpec:
+      type: object
+      description: object container for environment options for a DDX job containing flags to indicate if the DDX job is a validation-only test or if it should fail if an error is encountered.
+      properties:
+        defaultStyle:
+          type: string
+          description: The CSS style to use.
+          default: null
+        validateOnly:
+          type: boolean
+          description: Whether the job is validation only or full execution.
+          default: false
+        failOnError:
+          type: boolean
+          description: Should the job fail on the first error.
+        firstBatesNumber:
+          type: integer
+          description: First numeric value for the first Bates number pattern on the first page.
+          default: -1
+
+    ToPDFAConversionOptionSpec:
+      type: object
+      description: Conversion options to be used when transforming a document from PDF to PDF/A.
+      properties:
+        compliance:
+          type: string
+          description: The compliance level.
+          enum:
+            - PDFA_1B
+            - PDFA_2B
+            - PDFA_3B
+        resultLevel:
+          type: string
+          description: The result level of the conversion output.
+          enum:
+            - PASS_FAIL
+            - SUMMARY
+            - DETAILED
+        optionalContent:
+          type: string
+          description: The optionContent setting of the conversion output.
+          enum:
+            - VISIBLE
+            - ALL
+        colorSpace:
+          type: string
+          description: The predefined ColorSpace name.
+          enum:
+            - S_RGB
+            - COATED_FOGRA27
+            - JAPAN_COLOR_COATED
+            - SWOP
+        verify:
+          type: boolean
+          description: Whether the PDF/A should be verified after conversion.
+
+    IsPDFAConversionOptionSpec:
+      type: object
+      description: Client-configurable settings that help drive the validation scan.
+      properties:
+        compliance:
+          type: string
+          description: The compliance level.
+          enum:
+            - PDFA_1B
+            - PDFA_2B
+            - PDFA_3B
+        resultLevel:
+          type: string
+          description: The result level of the validation output.
+          enum:
+            - PASS_FAIL
+            - SUMMARY
+            - DETAILED
+
+    AssemblerResultSuccess:
+      type: object
+      description: Container for the results of a DDX job. It includes result documents as well as exceptions that occurred for each DDX block that failed. It also contains audit lists that are useful for iterating through the result documents or exceptions.
+      properties:
+        resultDocument:
+          description: The result document.
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+
+        jobLog:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: The job log.
+
+        throwables:
+          type: object
+          description: A map of throwables for those blocks that failed.
+          additionalProperties:
+            type: object
+            properties:
+              jobLog:
+                oneOf:
+                  - type: string
+                    format: binary
+                  - type: string
+        successfulBlockNames:
+          type: array
+          description: The keys of successful blocks.
+          items:
+            type: string
+        failedBlockNames:
+          type: array
+          description: The keys of failed blocks.
+          items:
+            type: string
+
+    PDFAConversionSuccessResult:
+      type: object
+      description: The converted resultant PDF/Adocument.
+      properties:
+        resultDocument:
+          description: The result document.
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+
+    PDFAValidationSuccessResult:
+      type: object
+      description: Container for the results of a PDFA validation request. It includes a boolean indicating conformance to the request options as well as the job log generated during the validation.
+      properties:
+        isPDFA:
+          type: boolean
+          description: Whether the document is PDF/A document or not.
+
+
+    ErrorInfoDDX:
+      type: object
+      description: Error info detail in cases of invoke ddx failures
+      properties:
+        status:
+          type: integer
+          default: "http code"
+          description: Http code.
+          format: int32
+        code:
+          type: string
+          default: "error code"
+          description: Error code.
+        message:
+          type: string
+          default: "exception message or message code"
+          description: Exception message or message code.
+    ErrorInfoISEDDX:
+      type: object
+      description: Error info detail in cases of internal server error in invoke ddx
+      properties:
+        jobLog:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: The job log.
+        status:
+          type: integer
+          default: "http code"
+          description: Http code.
+          format: int32
+        code:
+          type: string
+          default: "error code"
+          description: Error code.
+        message:
+          type: string
+          default: "exception message or message code"
+          description: Exception message or message code.
+
+    ErrorInfoIsPDFA:
+      type: object
+      description: Error info detail in cases of validation failures
+      properties:
+        status:
+          type: integer
+          default: "http code"
+          description: Http code.
+          format: int32
+        code:
+          type: string
+          default: "error code"
+          description: Error code.
+        message:
+          type: string
+          default: "exception message or message code"
+          description: Exception message or message code.
+
+    ErrorInfoISEIsPDFA:
+      type: object
+      description: Error info detail in cases of internal server error in validation
+      properties:
+        status:
+          type: integer
+          default: "http code"
+          description: Http code.
+          format: int32
+        code:
+          type: string
+          default: "error code"
+          description: Error code.
+        message:
+          type: string
+          default: "exception message or message code"
+          description: Exception message or message code.
+        jobLog:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: The job log.
+        validationLog:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: The validation results.
+
+    ErrorInfoToPDFA:
+      type: object
+      description: Error info detail in cases of conversion failures
+      properties:
+        status:
+          type: integer
+          default: "http code"
+          description: Http code.
+          format: int32
+        code:
+          type: string
+          default: "error code"
+          description: Error code.
+        message:
+          type: string
+          default: "exception message or message code"
+          description: Exception message or message code.
+
+    ErrorInfoISEToPDFA:
+      type: object
+      description: Error info detail in cases of internal server error in conversion
+      properties:
+        status:
+          type: integer
+          default: "http code"
+          description: Http code.
+          format: int32
+        code:
+          type: string
+          default: "error code"
+          description: Error code.
+        message:
+          type: string
+          default: "exception message or message code"
+          description: Exception message or message code.
+        jobLog:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: The job log.
+        conversionLog:
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+          description: The conversion results.
+
+
+  responses:
+    InvokeDDXSuccess:
+      description: DDX has been executed on the input documents.
+      content:
+        multipart/mixed:
+          schema:
+            $ref: '#/components/schemas/AssemblerResultSuccess'
+
+    ToPDFASuccess:
+      description: Document has been converted.
+      content:
+        application/pdf:
+          schema:
+            $ref: '#/components/schemas/PDFAConversionSuccessResult'
+
+    IsPDFASuccess:
+      description: Document has been validated.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PDFAValidationSuccessResult'
+
+    BadRequestDDX:
+      description: Bad Request. The request was invalid or cannot be served.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoDDX'
+
+    InternalServerDDX:
+      description: Internal Server Error. The server has encountered an error and is unable to process your request at this time.
+      content:
+        multipart/mixed:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoISEDDX'
+
+    RequestTimeoutDDX:
+      description: Request timed out. An operation has timed out on the client.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoDDX'
+
+    UnauthorizedDDX:
+      description: Unauthorized. Authentication credentials are missing or incorrect.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoDDX'
+
+    BadRequestToPDFA:
+      description: Bad Request. The request was invalid or cannot be served.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoToPDFA'
+
+    InternalServerToPDFA:
+      description: Internal Server Error. The server has encountered an error and is unable to process your request at this time.
+      content:
+        multipart/mixed:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoISEToPDFA'
+
+    RequestTimeoutToPDFA:
+      description: Request timed out. An operation has timed out on the client.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoToPDFA'
+
+    UnauthorizedToPDFA:
+      description: Unauthorized. Authentication credentials are missing or incorrect.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoToPDFA'
+
+    BadRequestIsPDFA:
+      description: Bad Request. The request was invalid or cannot be served.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoIsPDFA'
+
+    InternalServerIsPDFA:
+      description: Internal Server Error. The server has encountered an error and is unable to process your request at this time.
+      content:
+        multipart/mixed:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoISEIsPDFA'
+
+    RequestTimeoutIsPDFA:
+      description: Request timed out. An operation has timed out on the client.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoIsPDFA'
+
+    UnauthorizedIsPDFA:
+      description: Unauthorized. Authentication credentials are missing or incorrect.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfoIsPDFA'
+
+  headers:
+    Location:
+      description: Link of the resource created
+      schema:
+        type: string

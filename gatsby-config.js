@@ -28,8 +28,8 @@ module.exports = {
           description: 'Communications Batch APIs Reference',
           path: '/api/batch.md'
         }, {
-          title: 'Assembler Batch APIs',
-          description: 'Communications Batch APIs Reference',
+          title: 'Assembler Sync APIs',
+          description: 'Communications Sync APIs Reference',
           path: '/api/assembler-sync.md'
         }]
       },

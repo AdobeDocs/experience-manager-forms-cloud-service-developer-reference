@@ -76,5 +76,5 @@ Use Asynchronous APIs to generate multiple communications at scheduled intervals
 
 [Assembler Syncronous API](references/assembler-sync.md) 
 
-Use Assembler APIs to combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents.
+Use Assembler APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
 

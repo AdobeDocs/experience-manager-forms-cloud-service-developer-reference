@@ -34,7 +34,7 @@ These APIs are available in two flavours:
 
 * **Synchronous APIs** are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
 
-* **Asynchronous APIs(Batch APIs)** are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
+* **Asynchronous APIs (Batch APIs)** are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
 
 ## Discover 
 
@@ -64,13 +64,13 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 [Communications Syncronous API](references/sync.md) 
 
-Use Communications APIs Syncronous to generate a communication on demand for print and digital deliveries..
+Use Communications APIs Syncronous to generate a communication on demand for print and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 
-[Communications Asynchronous APIs (Batch API)](references/batch.md) 
+[Communications Asynchronous APIs](references/batch.md) 
 
-Use Asynchronous APIs (Batch mode) to generate multiple communications at scheduled intervals for print and digital deliveries.
+Use Asynchronous APIs to generate multiple communications at scheduled intervals for print and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 

@@ -12,7 +12,7 @@ info:
 
     You can find out more information about Assembler at
 
-    [Overrview of AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-64/forms/use-document-services/overview-aem-document-services.html?lang=en#)
+    [Overrview of AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=en#)
 
     # Before you start
     Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
@@ -30,7 +30,7 @@ tags:
     description: Assembler Services Capabilities
 externalDocs:
   description: Find out more
-  url: https://experienceleague.adobe.com/docs/experience-manager-64/forms/use-document-services/overview-aem-document-services.html?lang=en#
+  url: https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=en#
 paths:
   /adobe/forms/assembler/ddx/invoke:
     post:

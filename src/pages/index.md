@@ -20,7 +20,8 @@ Experience Manager Forms Cloud Service provide HTTP APIs that allow you to progr
 
 #### Resources
 
-* [Experience Manager Forms Documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [Experience Manager Forms Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)
+
 
 ## Overview
 
@@ -74,7 +75,8 @@ Use these APIs to generate multiple communications at scheduled intervals for pr
 
 <DiscoverBlock slots="link, text"/>
 
-[Document manipulation synchronous APIs](references/assembler-sync.md) 
+[(pre-release)Document manipulation synchronous APIs](references/assembler-sync.md) 
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
 
+**Document manipulation APIs are in pre-release phase and subject to change before actual release.**

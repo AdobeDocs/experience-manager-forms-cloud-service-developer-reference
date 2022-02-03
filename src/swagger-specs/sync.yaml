@@ -2,7 +2,7 @@
 openapi: 3.0.0
 info:
   description: |
-    AEM Forms as a Cloud Service - Communications document generation synchronous APIs 
+    Communications document generation synchronous APIs 
     
     # Introduction
     Communications document generation synchronous APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enables you to create applications that let you:
@@ -28,7 +28,7 @@ security:
 - Token-based authentication: []
 - Basic authentication: []
 tags:
-- name: Communications document generation synchronous APIs
+- name: Document generation APIs
   description: Communications document generation capabilities
 - name: PrintedOutput
   x-displayName: PrintedOutput

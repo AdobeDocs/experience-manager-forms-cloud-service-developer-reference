@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   description: >
-    AEM Forms as a Cloud Service - Communications document generation batch (asynchronous) APIs
+    Communications document generation batch (asynchronous) APIs
 
 
     # Introduction
@@ -31,7 +31,7 @@ info:
 servers:
   - url: https://[AEM Forms Cloud Service author server]/adobe/forms/batch/output
 tags:
-  - name: Communications document generation batch (asynchronous) APIs
+  - name: Document generation APIs
     description: Communications document generation APIs capabilities
   - name: Batch Configuration
     description: Batch configuration contains information about Cloud Configuration, path of data file, location to save output, type of output, and path of template.

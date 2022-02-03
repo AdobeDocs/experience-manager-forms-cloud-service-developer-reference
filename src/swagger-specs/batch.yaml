@@ -1,12 +1,12 @@
 openapi: 3.0.3
 info:
   description: >
-    AEM Forms as a Cloud Service - Communications
+    AEM Forms as a Cloud Service - Communications document generation batch (asynchronous) APIs
 
 
     # Introduction
 
-    Communications APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enables you to create applications that let you:
+    Communications document generation APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enables you to create applications that let you:
 
 
     - Generate documents by populating template files with XML data. For
@@ -19,21 +19,20 @@ info:
     - Generate PDF, PostScript, PCL, and ZPL documents in bulk by merging multiple sets of data with source templates.
 
 
-    You can find out more about document generation at [AEM Forms as a Cloud Service - Communications
-    Overview](https://www.adobe.com/go/learn_aemformscs_communications_en)
+    You can find out more about document generation at [AEM Forms as a Cloud Service - Communications Overview](https://www.adobe.com/go/learn_aemformscs_communications_en)
 
 
     # Before you start
 
-    Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
+    Make user account of your developer or technical account member of forms-user group. If you do not have a technical account, make a call to Experience Manager as a Cloud Service. When you use service credential a technical account is created on the first call.
 
-  title: AEM Forms as a Cloud Service - Communications
+  title: AEM Forms as a Cloud Service - Communications document generation batch (asynchronous) APIs
   version: 1.0.0-oas3
 servers:
   - url: https://[AEM Forms Cloud Service author server]/adobe/forms/batch/output
 tags:
-  - name: Communications Services
-    description: Communications Services Capabilities
+  - name: Communications document generation batch (asynchronous) APIs
+    description: Communications document generation APIs capabilities
   - name: Batch Configuration
     description: Batch configuration contains information about Cloud Configuration, path of data file, location to save output, type of output, and path of template.
   - name: Batch Execution
@@ -274,12 +273,12 @@ components:
           $ref: '#/components/schemas/ConfigName'
         dataSourceConfigUri:
           type: string
-          description: This is the location of data source configuration containing details of cloud config (authentication info for cloud account), source (location for data files), and destinatin (location for output files generated and failure information details).
+          description: This is the location of data source configuration containing details of cloud config (authentication info for cloud account), source (location for data files), and destination (location for output files generated and failure information details).
         outputTypes:
           type: array
           items:
             $ref: '#/components/schemas/OutputType'
-          description: It contains details of the output formats requested for generation. PDF, representing PDF format; and PRINT representing all non-PDF formats e.g. PCL, PostScript etc.
+          description: It contains details of the output formats requested for generation. PDF, representing PDF format; and PRINT representing all non-PDF formats For example PCL, PostScript and so on.
         template:
           type: string
           description: The template defines appearance and behavior of the PDF document. The API supports templates of format - XDP and PDF document. Specify an absolute or relative AEM repository path of your template and prefix "crx://" to the path. Ensure that the size of the template file is larger than 16KB.

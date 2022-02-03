@@ -1,33 +1,33 @@
 openapi: 3.0.3
 info:
   description: |
-    AEM Forms as a Cloud Service - Assembler sync HTTP APIs.
+    AEM Forms as a Cloud Service - Document manipulation synchronous HTTP APIs.
 
     # Introduction
-    Assembler APIs lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. Each job submitted to the Assembler includes a Document Description XML (DDX) document, source documents, and external resources (strings and graphics). The DDX document provides instructions on how to use the source documents to produce a set of resultant documents. It enables you to create applications that let you:
+    Document manipulation APIs lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. Each job submitted to the Document manipulation includes a Document Description XML (DDX) document, source documents, and external resources (strings and graphics). The DDX document provides instructions on how to use the source documents to produce a set of resultant documents. It enables you to create applications that let you:
 
     - Converts PDF documents to PDF/A standard.
     - Transforms PDFs and PDF forms (created in Acrobat) to PDF/A-1b, PDF/A-2b, and PDFA/A-3b.
     - Validates the compliance of a PDF/A file and converts it if necessary.
 
-    You can find out more information about Assembler at
+    You can find out more information about document manipulation APIs at:
 
     [Overrview of AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html)
 
     # Before you start
     Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
 
-    # Set up Assembler APIs
-    Contact formscsbeta@adobe.com to enable Assembler APIs for your organization. Send name of your organization, program details, and email address of your AEM as a Cloud Service administrator. Also, set up a [local development environment](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html) to test and develop the functionality using Assembler APIs locally.
+    # Set up document manipulation APIs
+    Contact formscsbeta@adobe.com to enable document manipulation APIs for your organization. Send name of your organization, program details, and email address of your AEM as a Cloud Service administrator. Also, set up a [local development environment](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html) to test and develop the functionality using document manipulation APIs locally.
 
-  title: AEM FaaCS - Assembler sync HTTP APIs
+  title: AEM Forms as a Cloud Service - Document manipulation synchronous HTTP APIs
   version: 0.0.1
 
 servers:
   - url: https://author-p8857-e10452-cmstg.adobeaemcloud.com
 tags:
-  - name: Assembler sync HTTP APIs
-    description: Assembler Services Capabilities
+  - name: Document manipulation synchronous HTTP APIs
+    description: Document manipulation capabilities
 externalDocs:
   description: Find out more
   url: https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html

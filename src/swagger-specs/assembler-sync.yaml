@@ -6,9 +6,9 @@ info:
     # Introduction
     Document manipulation APIs lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. Each job submitted to the Document manipulation includes a Document Description XML (DDX) document, source documents, and external resources (strings and graphics). The DDX document provides instructions on how to use the source documents to produce a set of resultant documents. It enables you to create applications that let you:
 
-    - Converts PDF documents to PDF/A standard.
-    - Transforms PDFs and PDF forms (created in Acrobat) to PDF/A-1b, PDF/A-2b, and PDFA/A-3b.
-    - Validates the compliance of a PDF/A file and converts it if necessary.
+    - assemble or disassemble PDF documents 
+    - convert a PDF document to PDF/A document
+    - validate if a PDF document is PDF/A compliant 
 
     You can find out more information about document manipulation APIs at:
 
@@ -36,7 +36,7 @@ paths:
     post:
       tags:
         - DDX execution
-      summary: Executes the DDX on the given input documents and returns an object containing the result documents
+      summary: Executes the [DDX](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) on the given input documents and returns an object containing the result documents
       operationId: InvokeDDX
       requestBody:
         required: true

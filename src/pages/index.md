@@ -27,9 +27,9 @@ Experience Manager Forms Cloud Service provide HTTP APIs that allow you to progr
 
 AEM Forms Cloud Service provides APIs to:
 
-* Create, assemble, and deliver brand-oriented and personalized communications such as business correspondences, documents, statements, claim processing letters, benefit notices, monthly bills, and welcome kits. These are known as Communications APIs and help you combine a template (XFA or PDF) with customer data to generate documents in PDF, PS, PCL, and ZPL formats. These are known as Output APIs
+* Create, assemble, and deliver brand-oriented and personalized communications such as business correspondences, documents, statements, claim processing letters, benefit notices, monthly bills, and welcome kits. These  help you combine a template (XFA or PDF) with customer data to generate documents in PDF, PS, PCL, and ZPL formats. These are known as document generation APIs
 
-* Combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. These are known as Assembler APIs.
+* Combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. These are known as Document manipulation APIs.
 
 These APIs are available in two flavours: 
 

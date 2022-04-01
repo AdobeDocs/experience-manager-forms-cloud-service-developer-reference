@@ -17,6 +17,11 @@ info:
     # Before you start
     Make user account of your developer or technical account member of forms-user group. If you do not have a technical account, make a call to Experience Manager as a Cloud Service. When you use service credential a technical account is created on the first call.
     <SecurityDefinitions />
+
+    # Download the definition file
+    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/sync.yaml) and upload it to postman to check functionality of the APIs.
+
+
   title: AEM Forms as a Cloud Service - Communications document generation synchronous APIs
   version: 0.0.1
 servers:

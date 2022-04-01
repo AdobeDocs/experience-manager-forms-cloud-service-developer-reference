@@ -5,7 +5,6 @@ info:
 
 
     # Introduction
-
     Communications document generation APIs help you combine XFA-based XDP or PDF templates and Acrobat Forms (AcroForm) with XML data to generate print documents in various formats. It enables you to create applications that let you:
 
 
@@ -23,8 +22,10 @@ info:
 
 
     # Before you start
-
     Make user account of your developer or technical account member of forms-user group. If you do not have a technical account, make a call to Experience Manager as a Cloud Service. When you use service credential a technical account is created on the first call.
+
+    # Download the definition file
+    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/assembler-sync.yaml) and upload it to postman to check functionality of the APIs.
 
   title: AEM Forms as a Cloud Service - Communications document generation batch (asynchronous) APIs
   version: 1.0.0-oas3

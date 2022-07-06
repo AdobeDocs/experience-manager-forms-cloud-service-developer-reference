@@ -26,7 +26,7 @@ module.exports = {
         }, {
           title: 'Document generation synchronous APIs',
           description: 'Document generation batch APIs reference',
-          path: '/api/batch.md'
+          path: '/api/output-batch.md'
         }, {
           title: 'Document manipulation synchronous APIs',
           description: 'Document manipulation synchronous APIs',

@@ -28,7 +28,7 @@ info:
   version: 0.0.1
 
 servers:
-  - url: 
+  - url: https://author-p8857-e10452-cmstg.adobeaemcloud.com/adobe/forms/doc/v1
 tags:
   - name: Document manipulation sync HTTP APIs
     description: Document manipulation capabilities

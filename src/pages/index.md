@@ -69,12 +69,12 @@ Use these APIs to generate a communication on demand for print and digital deliv
 
 <DiscoverBlock slots="link, text"/>
 
-[Document generation asynchronous APIs](references/batch.md) 
+[Document generation asynchronous APIs](references/output-batch.md) 
 
 Use these APIs to generate multiple communications at scheduled intervals for print and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 
-[(pre-release)Document manipulation synchronous APIs](references/assembler-sync.md) 
+[Document manipulation synchronous APIs](references/assembler-sync.md) 
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.x`

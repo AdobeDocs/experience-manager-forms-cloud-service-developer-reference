@@ -78,5 +78,3 @@ Use these APIs to generate multiple communications at scheduled intervals for pr
 [(pre-release)Document manipulation synchronous APIs](references/assembler-sync.md) 
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
-
-**Document manipulation APIs are in pre-release phase and subject to change before actual release.**

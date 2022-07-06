@@ -25,17 +25,18 @@ info:
     Make user account of your developer or technical account member of forms-user group. If you do not have a technical account, make a call to Experience Manager as a Cloud Service. When you use service credential a technical account is created on the first call.
 
     # Download the definition file
-    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/assembler-sync.yaml) and upload it to postman to check functionality of the APIs.
+    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/batch.yaml) and upload it to postman to check functionality of the APIs.
 
-  title: AEM Forms as a Cloud Service - Communications document generation batch (asynchronous) APIs
+  title: AEM Forms as a Cloud Service - Communications
   version: 1.0.0-oas3
 servers:
-  - url: https://[AEM Forms Cloud Service author server]/adobe/forms/batch/output
+  - url: >-
+      
 tags:
-  - name: Document generation APIs
-    description: Communications document generation APIs capabilities
+  - name: Communications Services
+    description: Communications Services Capabilities
   - name: Batch Configuration
-    description: Batch configuration contains information about Cloud Configuration, path of data file, location to save output, type of output, and path of template.
+    description: Configuration of a Batch Job
   - name: Batch Execution
     description: Execution Instances of a Batch Job
 externalDocs:
@@ -56,7 +57,7 @@ paths:
               $ref: '#/components/schemas/BatchConfig'
       responses:
         '201':
-          description: Batch configuration is created.
+          description: Batch configuration has been created.
           headers:
             Location:
               $ref: '#/components/headers/Location'
@@ -212,38 +213,11 @@ paths:
           $ref: '#/components/responses/RequestTimeout'
         '500':
           $ref: '#/components/responses/InternalServer'
-  /config/{configName}/execution/{executionId}/cancel:
-    put:
-      summary: Stop execution for this batch execution instance
-      tags:
-        - Batch Execution
-      operationId: CancelBatchRunInstance
-      parameters:
-        - $ref: '#/components/parameters/ConfigName'
-        - $ref: '#/components/parameters/ExecutionId'
-      responses:
-        '202':
-          description: Request for batch execution cancellation accepted.
-          headers:
-            Location:
-              description: Link of the batch execution instance
-              schema:
-                type: string
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '408':
-          $ref: '#/components/responses/RequestTimeout'
-        '500':
-          $ref: '#/components/responses/InternalServer'
   /config/{configName}/executions:
     get:
       tags:
         - Batch Execution
-      summary: Get state of all batch instances being run
+      summary: Get state of all batch instances being executed
       operationId: GetAllRunningInstancesForBatch
       parameters:
         - $ref: '#/components/parameters/ConfigName'
@@ -274,21 +248,37 @@ components:
           $ref: '#/components/schemas/ConfigName'
         dataSourceConfigUri:
           type: string
-          description: This is the location of data source configuration containing details of cloud config (authentication info for cloud account), source (location for data files), and destination (location for output files generated and failure information details).
+          description: This is the location of data source configuration containing details of cloud config (authentication info for cloud account), source (location for data files), and destinatin (location for output files generated and failure information details).
+        dataSource:
+          type: object
+          description: This inline data source object gets returned as part of BatchState
+          properties:
+            cloudConfigPath:
+              type: string
+          additionalProperties:
+            type: string
         outputTypes:
           type: array
           items:
             $ref: '#/components/schemas/OutputType'
-          description: It contains details of the output formats requested for generation. PDF, representing PDF format; and PRINT representing all non-PDF formats For example PCL, PostScript and so on.
+          description: >-
+            It contains details of the output formats requested for generation. PDF, representing PDF format;
+            and PRINT representing all non-PDF formats e.g. PCL, PostScript etc.
         template:
           type: string
-          description: The template defines appearance and behavior of the PDF document. The API supports templates of format - XDP and PDF document. Specify an absolute or relative AEM repository path of your template and prefix "crx://" to the path. Ensure that the size of the template file is larger than 16KB.
+          description: >-
+            The template defines appearance and behavior of the PDF document.
+            The API supports templates of format - XDP and PDF document. You can
+            specify a reference path of your AEM Repository.
         xci:
           type: string
-          description: The service uses an XCI configuration file to configure various properties of the PDF document. The XCI parameter has an effect only when the template is of type XDP or an XDP-based PDF document. Always specify an abosulte path of an XCI configuration file. Ensure that the size of the XCI file is larger than 16KB.
+          description: >-
+            The service uses an XCI configuration file to configure various
+            properties of the PDF document. The XCI parameter has an effect only
+            when the template is of type XDP or an XDP-based PDF document.
         contentRoot:
           type: string
-          description: Root location within an AEM repository to resolve the template from.  Specify an absolute repository path of your contentRoot and prefix "crx://" to the path.
+          description: Root location within an AEM repository to resolve template from.
         pdfOutputOptions:
           $ref: '#/components/schemas/PDFOutputOptions'
           description: It contains detailled configuration parameters which allow control over PDF file generation.
@@ -460,31 +450,39 @@ components:
       properties:
         locale:
           type: string
-          description: Render the output PDF document in specified locale.
+          description: Locale in which pdf should be rendered.
           default: en
         isTagged:
           type: boolean
-          description: Specify if the output PDF document can be tagged.
+          description: Specify if the PDF document can be tagged.
           default: false
         embedFonts:
           type: boolean
-          description: Enable the option to embed fonts to the output PDF document.
+          description: Enable the option to embed fonts to the PDF document.
           default: false
         linearizedPDF:
           type: boolean
           default: false
-          description: Enable the option to optimize the output PDF for web viewing.
+          description: Enable the option to optimize the PDF for web viewing.
         retainFormState:
           type: boolean
           default: false
-          description: Set true to retain PDF Form state while flattening PDF. This parameter has effect only when source template is an XFA-based PDF Form and no input data is provided.
+          description: >-
+            Set true to retain PDF Form state while flattening PDF. This
+            parameter has effect only when source template is an XFA-based PDF
+            Form and no input data is provided.
         retainUnsignedSignatureFields:
           type: boolean
           default: false
-          description: Set true to retain interactive unsigned signature fields in generated Flat PDF. It allows you to use the PDF document for gathering signatures.
+          description: >-
+            Set true to retain interactive unsigned signature fields in
+            generated Flat PDF. It allows you to use PDF for gathering
+            signatures.
         acrobatVersion:
           type: string
-          description: Set the minimum version of Acrobat Reader required to open the PDF document.
+          description: >-
+            Set the minimum version of Acrobat Reader required to open the PDF
+            document.
           enum:
             - Acrobat_10
             - Acrobat_10_1
@@ -525,13 +523,13 @@ components:
                 items:
                   $ref: '#/components/schemas/BatchState'
     BadRequest:
-      description: Bad Request. The request is invalid or cannot be served.
+      description: Bad Request. The request was invalid or cannot be served.
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
     NotFound:
-      description: The specified resource was not found.
+      description: The specified resource was not found
       content:
         application/json:
           schema:
@@ -543,7 +541,9 @@ components:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
     InternalServer:
-      description: Internal Server Error. The server has encountered an error and is unable to process your request at this time.
+      description: >-
+        Internal Server Error. The server has encountered an error and is unable
+        to process your request at this time.
       content:
         application/json:
           schema:

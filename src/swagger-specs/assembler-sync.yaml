@@ -30,8 +30,8 @@ info:
 servers:
   - url: https://[author].adobeaemcloud.com/adobe/forms/doc/v1
 tags:
-  - name: Document manipulation sync HTTP APIs
-    description: Document manipulation capabilities
+  - name: Document Manipulation Sync HTTP APIs
+    description: Document Manipulation Capabilities
 externalDocs:
   description: Find out more
   url: https://experienceleague.adobe.com/docs/experience-manager-64/forms/use-document-services/overview-aem-document-services.html?lang=en#

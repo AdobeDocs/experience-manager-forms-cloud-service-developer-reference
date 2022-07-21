@@ -74,7 +74,7 @@ paths:
   /generatePDFOutput:
     post:
       tags:
-      - Communications document generation synchronous APIs
+      - Communications Document Generation Synchronous APIs
       summary: Generates a PDF Document from a template and merge data to it.
       requestBody:
         content:

@@ -21,20 +21,19 @@ info:
     # Download the definition file
     The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/sync.yaml) and upload it to postman to check functionality of the APIs.
 
-
-  title: AEM Forms as a Cloud Service - Communications document generation synchronous APIs
+  title: AEM Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
-- url: https://[author].adobeaemcloud.com/adobe/forms/doc/v1
+- url: https://author-p8857-e10452-cmstg.adobeaemcloud.com/adobe/forms/doc/v1
   description: Author Instance
-- url: https://[publish].adobeaemcloud.com/adobe/forms/doc/v1
+- url: https://publish-p8857-e10452-cmstg.adobeaemcloud.com/adobe/forms/doc/v1
   description: Publish instance
 security:
 - Token-based authentication: []
 - Basic authentication: []
 tags:
-- name: Document generation APIs
-  description: Communications document generation capabilities
+- name: Communications Services
+  description: Communications Services Capabilities
 - name: PrintedOutput
   x-displayName: PrintedOutput
   description: |
@@ -58,7 +57,7 @@ tags:
 x-tagGroups:
   - name: Services
     tags:
-      - Communications document generation synchronous APIs
+      - Communications Services
       - store
   - name: Models
     tags:
@@ -74,7 +73,7 @@ paths:
   /generatePDFOutput:
     post:
       tags:
-      - Communications Document Generation Synchronous APIs
+      - Communications Services
       summary: Generates a PDF Document from a template and merge data to it.
       requestBody:
         content:
@@ -96,7 +95,7 @@ paths:
                 style: form
       responses:
         "200":
-          description: Operation successful. The generated PDF Document is included in the response.
+          description: Operation successful. The generated PDF Document is included in the respose.
           content:
             application/pdf:
               schema:
@@ -134,7 +133,7 @@ paths:
   /generatePrintedOutput:
     post:
       tags:
-      - Communications document generation synchronous APIs
+      - Communications Services
       summary: Generate a PostScript (PS), Printer Command Language (PCL), Zebra Printing Language (ZPL) document from an XDP file or PDF document.
       requestBody:
         content:
@@ -215,16 +214,16 @@ components:
         template:
           description: |
             The template defines appearance and behavior of the PDF document.
-            The API supports templates of format: XDP, Acrobat Forms, and PDF
+            The API supports templates of format: XDP and PDF
             document. You can specify a fully qualified path, reference path of
-            your Experience Manager Repository, or path of a binary file.
+            your AEM Repository, or path of a binary file.
           oneOf:
           - type: string
             format: binary
           - type: string
         data:
           description: |
-             An XML or JSON file containing the data to be merged with template.
+             An XML file containing the data to be merged with template.
              You can specify a fully qualified HTTP location or path of a binary file.
           oneOf:
           - type: string
@@ -276,7 +275,7 @@ components:
           default: "en"
         contentRoot:
           type: string
-          description: Location of template resources (images, fragments, and so on).
+          description: Location of template resources (images, fragments, etc.).
         copies:
           type: integer
           description: Sets the number of copies to print. The default number is 1.
@@ -304,7 +303,7 @@ components:
           default: "en"
         contentRoot:
           type: string
-          description: Location of template resources (images, fragments, and so on).
+          description: Location of template resources (images, fragments, etc.).
         isTagged:
           type: boolean
           description: Specify if the PDF document can be tagged.
@@ -410,9 +409,9 @@ components:
         ref: The <output_file_content_part> containing the input file in the multipart/form-data request.
         type: binary
     http:
-      summary: Example of URL-based document.
+      summary: Example of URL based document.
       value:
-        ref: The HTTP URL which returns the value
+        ref: The http url which return the value
         type: http
     printoptions:
       value:
@@ -437,21 +436,26 @@ components:
       scheme: bearer
       bearerFormat: JWT
       description: |
-        In token-based authentication, an access token (Bearer authentication token) is required to make requests to Experience Manager as a Cloud Service.
+        In token-based authentication, an access token (Bearer authentication token) is required to make requests to AEM as a Cloud Service.
         AEM Forms as a Cloud Service provides APIs to securely retrieve the access token.
         The end-to-end workflow for retrieving and using the token to authenticate a request is:
-        - [Retrieve Experience Manager as a Cloud Service credential from the Developer
+
+        - [Retrieve AEM as a Cloud Service credentials from the Developer
         Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-        - [Install Experience Manager as a Cloud Service credential on your
+
+        - [Install AEM as a Cloud Service credentials on your
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
         (Application Server, Web Server, or other non-AEM servers) configured to
         send requests to (make calls) the cloud service.
+
         - [Generate a JWT token and exchanged it with Adobe IMS APIs for an
         access
         token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
-        - Run the Experience Manager API with the access token as a Bearer Authentication
+
+        - Run the AEM API with the access token as a Bearer Authentication
         token.
-        - [Set appropriate permissions for the technical account user in the Experience Manager
+
+        - [Set appropriate permissions for the technical account user in the AEM
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
     Basic authentication:
       type: https
@@ -460,4 +464,4 @@ components:
         Basic authentication is a simple authentication scheme built into the HTTP protocol.
         The client sends HTTP requests with the Authorization header that contains the word Basic followed by a space and a base64-encoded string username:password.
         For example, to authorize as admin / admin the client sends Basic [base64-encoded string username]: [base64-encoded string password].
-        For information about retrieving and using token, see [Token-based authentication to Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en)
+        For information about retrieving and using token, see [Token-based authentication to AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en)

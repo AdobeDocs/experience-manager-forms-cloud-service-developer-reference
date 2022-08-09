@@ -28,7 +28,7 @@ info:
   version: 0.0.1
 
 servers:
-  - url: https://[author].adobeaemcloud.com/adobe/forms/doc/v1
+  - url: https://[author].adobeaemcloud.com/
 tags:
   - name: Document Manipulation Sync HTTP APIs
     description: Document Manipulation Capabilities

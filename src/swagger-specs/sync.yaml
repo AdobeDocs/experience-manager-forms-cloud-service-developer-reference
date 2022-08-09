@@ -24,9 +24,9 @@ info:
   title: AEM Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
-- url: https://author-p8857-e10452-cmstg.adobeaemcloud.com/adobe/forms/doc/v1
+- url: https://author-p8857-e10452-cmstg.adobeaemcloud.com/
   description: Author Instance
-- url: https://publish-p8857-e10452-cmstg.adobeaemcloud.com/adobe/forms/doc/v1
+- url: https://publish-p8857-e10452-cmstg.adobeaemcloud.com/
   description: Publish instance
 security:
 - Token-based authentication: []

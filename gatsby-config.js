@@ -22,7 +22,7 @@ module.exports = {
         menu: [{
           title: 'Document generation synchronous APIs',
           description: 'Document generation synchronous APIs reference',
-          path: '/api/sync.md'
+          path: '/api/output-sync.md'
         }, {
           title: 'Document generation synchronous APIs',
           description: 'Document generation batch APIs reference',

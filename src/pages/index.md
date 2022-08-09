@@ -63,7 +63,7 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 ### API References
 
-[Document generation syncronous API](references/sync.md) 
+[Document generation syncronous API](references/output-sync.md) 
 
 Use these APIs to generate a communication on demand for print and digital deliveries.
 

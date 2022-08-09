@@ -37,7 +37,7 @@ Communications provide APIs for on-demand and scheduled document generation. You
 
 ### API References
 
-[Syncronous API](../src/pages/api/sync.md)
+[Syncronous API](../src/pages/api/output-sync.md)
 
 Create and run communication APIs to merge XDP and PDF templates with XML data to generate branded communications for printing and digital deliveries.
 

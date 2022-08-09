@@ -31,7 +31,7 @@ info:
   version: 1.0.0-oas3
 servers:
   - url: >-
-      https://[author].adobeaemcloud.com/adobe/forms/batch/output
+      https://[AEM Forms Cloud Services Author Instance].adobeaemcloud.com/adobe/forms/batch/output
 tags:
   - name: Communications Services
     description: Communications Services Capabilities

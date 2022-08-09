@@ -19,14 +19,14 @@ info:
     <SecurityDefinitions />
 
     # Download the definition file
-    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/sync.yaml) and upload it to postman to check functionality of the APIs.
+    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/output-sync.yaml) and upload it to postman to check functionality of the APIs.
 
   title: AEM Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
-- url: https://author-p8857-e10452-cmstg.adobeaemcloud.com/
+- url: https://[AEM Forms Cloud Services Author Instance].adobeaemcloud.com/
   description: Author Instance
-- url: https://publish-p8857-e10452-cmstg.adobeaemcloud.com/
+- url: https://[AEM Forms Cloud Services Publish Instance].adobeaemcloud.com/
   description: Publish instance
 security:
 - Token-based authentication: []

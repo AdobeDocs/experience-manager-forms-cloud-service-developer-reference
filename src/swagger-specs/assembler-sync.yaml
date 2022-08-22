@@ -30,8 +30,8 @@ info:
 servers:
   - url: https://[AEM Forms Cloud Services Author Instance].adobeaemcloud.com/
 tags:
-  - name: Document Manipulation Sync HTTP APIs
-    description: Document Manipulation Capabilities
+  - name: Document manipulation Sync HTTP APIs
+    description: Assembler Services Capabilities
 externalDocs:
   description: Find out more
   url: https://experienceleague.adobe.com/docs/experience-manager-64/forms/use-document-services/overview-aem-document-services.html?lang=en#
@@ -120,7 +120,7 @@ components:
             - type: string
           description: Document Description XML document which provides instructions on how to use the source documents to produce a set of result documents.
         sourceDocument:
-          description: Logical name of input document which is being referenced in the DDX and the values being inline input document or a url
+          description: Logical name of input document which is being referenced in the DDX and the values being inline input document
           oneOf:
             - type: string
               format: binary
@@ -153,7 +153,7 @@ components:
         - type: string
           format: binary
         - type: string
-      description: The input document which can be a url or inline document.
+      description: The input can be an inline document.
 
     AssemblerOptionSpec:
       type: object

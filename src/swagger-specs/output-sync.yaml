@@ -13,7 +13,7 @@ info:
     - Generate PDF, PostScript, PCL, and ZPL documents in bulk by merging
     multiple sets of data with source templates.
     You can find out more about document generation at
-    [AEM Forms as a Cloud Service - Communications Overview](https://www.adobe.com/go/learn_aemformscs_communications_en)
+    [AEM Forms as a Cloud Service - Communications Overview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)
     # Before you start
     Make user account of your developer or technical account member of forms-user group. If you do not have a technical account, make a call to Experience Manager as a Cloud Service. When you use service credential a technical account is created on the first call.
     <SecurityDefinitions />
@@ -439,22 +439,17 @@ components:
         In token-based authentication, an access token (Bearer authentication token) is required to make requests to AEM as a Cloud Service.
         AEM Forms as a Cloud Service provides APIs to securely retrieve the access token.
         The end-to-end workflow for retrieving and using the token to authenticate a request is:
-
         - [Retrieve AEM as a Cloud Service credentials from the Developer
         Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-
         - [Install AEM as a Cloud Service credentials on your
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
         (Application Server, Web Server, or other non-AEM servers) configured to
         send requests to (make calls) the cloud service.
-
         - [Generate a JWT token and exchanged it with Adobe IMS APIs for an
         access
         token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
-
         - Run the AEM API with the access token as a Bearer Authentication
         token.
-
         - [Set appropriate permissions for the technical account user in the AEM
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
     Basic authentication:

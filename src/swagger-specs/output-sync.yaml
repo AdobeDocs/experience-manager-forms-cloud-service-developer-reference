@@ -37,7 +37,7 @@ info:
   title: AEM Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
-- url: https://<publish-url>.adobeaemcloud.com/adobe/forms/doc/v1
+- url: https://[AEM Forms Cloud Services Publish Instance]
   description: Publish instance
 security:
 - Token-based authentication: []

@@ -12,20 +12,20 @@ keywords:
 
 <Hero slots="heading, text"/> 
 
-# Adobe Experience Manager Forms Cloud Service
+# Adobe Experience Manager Forms Cloud Service - Communications 
 
-Experience Manager Forms Cloud Service provide HTTP APIs that allow you to programmatically perform key operations in your applications.
+Experience Manager Forms Cloud Service Communications provide HTTP APIs that help you create brand-approved, personalized, and standardized documents such as business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits.
 
 <Resources slots="heading, links"/>
 
 #### Resources
 
-* [Experience Manager Forms Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)
+* [AEM Forms Communications overview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)
 
 
 ## Overview
 
-AEM Forms Cloud Service provides APIs to:
+AEM Forms Cloud Service Communications provides APIs to:
 
 * Create, assemble, and deliver brand-oriented and personalized communications such as business correspondences, documents, statements, claim processing letters, benefit notices, monthly bills, and welcome kits. These  help you combine a template (XFA or PDF) with customer data to generate documents in PDF, PS, PCL, and ZPL formats. These are known as document generation APIs
 

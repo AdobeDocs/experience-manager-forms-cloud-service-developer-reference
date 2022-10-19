@@ -63,6 +63,8 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 ### API References
 
+#### Communication APIs
+
 [Document generation syncronous API](references/output-sync.md) 
 
 Use these APIs to generate a communication on demand for print and digital deliveries.
@@ -78,3 +80,9 @@ Use these APIs to generate multiple communications at scheduled intervals for pr
 [Document manipulation synchronous APIs](references/assembler-sync.md) 
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
+
+#### PDF Services
+
+[PDF Utility](references/pdf-utility-service.md)
+
+Use these APIs to convert an eligible PDF document to an XDP file (Form Design) or query information about a PDF document.

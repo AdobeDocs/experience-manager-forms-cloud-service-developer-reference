@@ -31,7 +31,7 @@ AEM Forms Cloud Service Communications provides APIs to:
 
 * Combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. These are known as Document manipulation APIs.
 
-These APIs are available in two flavours: 
+These APIs are available in two flavors: 
 
 * **Synchronous APIs** are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
 
@@ -65,7 +65,7 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 #### Communication APIs
 
-[Document generation syncronous API](references/output-sync.md) 
+[Document generation synchronous API](references/output-sync.md) 
 
 Use these APIs to generate a communication on demand for print and digital deliveries.
 

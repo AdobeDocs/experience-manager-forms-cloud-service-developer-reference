@@ -2,22 +2,19 @@
 openapi: 3.0.3
 info:
   description: |
-    The PDFUtility service can be used to perform operations on a PDF document.
-    It can convert an eligible PDF document to an XDP file and query information about a PDF document.
-    Before converting a PDF document to another format, it could be useful to inspect its properties to determine which service operation to invoke for the conversion.
-    For example, the service can be used to determine whether a PDF document contains comments or attachments.
-  title: PDFUtility Service
+    The PDF Utilities service can convert between PDF and XDP file formats, retrieve PDF document properties. For example, before converting a PDF document to another format, it is useful to inspect its properties to determine which service operation to invoke for the conversion.
+  title: PDF Utility Service
   version: 0.0.1-experimental
 servers:
-  - url: http://ethos.server.url/adobe/forms/pdfutil/
-    description: PDFUtility API Playground
+  - url: https://aemforms.adobe.io
+    description: AEM Forms - Communications
 tags:
-  - name: PDFUtility Services
-    description: Services offered by PDFUtility
+  - name: PDF Utility Service API
+    description: APIs offered by the PDF Utility Service
 x-tagGroups:
-  - name: Services
+  - name: AEM Forms - Communications API
     tags:
-      - PDFUtility Services
+      - PDF Utility Service API
   - name: Models
     tags:
       - PDFPropertiesRequest
@@ -25,10 +22,10 @@ x-tagGroups:
 security:
   - BearerAuth: []
 paths:
-  /getPDFProperties:
+  /adobe/forms/docservices/pdfutil/getPDFProperties:
     post:
       tags:
-        - PDFUtility Services
+        - PDF Utility Service API
       summary: Gets the properties of a PDF document.
       requestBody:
         content:
@@ -55,10 +52,10 @@ paths:
           $ref: "#/components/responses/TimedOut"
         500:
           $ref: "#/components/responses/InternalError"
-  /convertPDFtoXDP:
+  /adobe/forms/docservices/pdfutil/convertPDFtoXDP:
     post:
       tags:
-        - PDFUtility Services
+        - PDF Utility Service API
       summary: Converts a PDF document to an XDP.
       requestBody:
         content:
@@ -123,7 +120,7 @@ components:
         inPDFDoc:
           description: |
             A PDF whose properties are to be fetched.
-            You can specify an absolute HTTP(S) URL or a binary file.
+            You can specify an absolute HTTPS URL or a binary file.
           oneOf:
             - type: string
               format: binary
@@ -138,7 +135,7 @@ components:
         inPDFDoc:
           description: |
             A PDF which needs to be converted to XDP.
-            You can specify an absolute HTTP(S) URL or a binary file.
+            You can specify an absolute HTTPS URL or a binary file.
           oneOf:
             - type: string
               format: binary
@@ -300,24 +297,10 @@ components:
       scheme: bearer
       bearerFormat: JWT
       description: |
-        In token-based authentication, an access token (Bearer authentication token) is required to make requests to AEM as a Cloud Service.
-        AEM Forms as a Cloud Service provides APIs to securely retrieve the access token.
-        The end-to-end workflow for retrieving and using the token to authenticate a request is:
-
-        - [Retrieve AEM as a Cloud Service credential from the Developer
-        Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-
-        - [Install AEM as a Cloud Service credential on your
-        environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-        (Application Server, Web Server, or other non-AEM servers) configured to
-        send requests to (make calls) the cloud service.
-
-        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an
-        access
-        token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
-
-        - Run the AEM API with the access token as a Bearer Authentication
-        token.
-
-        - [Set appropriate permissions for the technical account user in the AEM
-        environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
+        An access token (Bearer authentication token) that is authorized to call the AEM Forms - Communications APIs is
+        required to make authenticated requests to the PDF Utility Service.
+        
+        - [Configure AEM Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
+        - [Retrieve JWT Credentials from the Developer
+        Console.](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/)
+        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)

@@ -7,14 +7,17 @@ info:
   version: 0.0.1-experimental
 servers:
   - url: https://aemforms.adobe.io
-    description: AEM Forms - Communications
+    description: Adobe Expereince Manager Forms - Communications
 tags:
-  - name: PDF Utility Service API
-    description: APIs offered by the PDF Utility Service
+  - name: Document Information
+    description: APIs that provide information about PDF / XDP documents.
+  - name: Document Conversion
+    description: APIs that convert one type of documents into another
 x-tagGroups:
-  - name: AEM Forms - Communications API
+  - name: Adobe Expereince Manager Forms - Communications API
     tags:
-      - PDF Utility Service API
+      - Document Information
+      - Document Conversion
   - name: Models
     tags:
       - PDFPropertiesRequest
@@ -25,7 +28,7 @@ paths:
   /adobe/forms/docservices/pdfutil/getPDFProperties:
     post:
       tags:
-        - PDF Utility Service API
+        - Document Information
       summary: Gets the properties of a PDF document.
       requestBody:
         content:
@@ -55,7 +58,7 @@ paths:
   /adobe/forms/docservices/pdfutil/convertPDFtoXDP:
     post:
       tags:
-        - PDF Utility Service API
+        - Document Conversion
       summary: Converts a PDF document to an XDP.
       requestBody:
         content:
@@ -297,10 +300,10 @@ components:
       scheme: bearer
       bearerFormat: JWT
       description: |
-        An access token (Bearer authentication token) that is authorized to call the AEM Forms - Communications APIs is
+        An access token (Bearer authentication token) that is authorized to call the Adobe Expereince Manager Forms - Communications APIs is
         required to make authenticated requests to the PDF Utility Service.
         
-        - [Configure AEM Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
+        - [Configure Adobe Expereince Manager Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
         - [Retrieve JWT Credentials from the Developer
         Console.](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/)
         - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)

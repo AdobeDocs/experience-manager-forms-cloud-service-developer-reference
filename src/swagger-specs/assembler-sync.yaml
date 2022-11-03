@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   description: |
-    AEM Forms as a Cloud Service - Document manipulation sync HTTP APIs.
+    Adobe Experience Manager Forms as a Cloud Service - Document manipulation sync HTTP APIs.
 
     # Introduction
     Document manipulation APIs lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents. Each job submitted to the Document manipulation APIs includes a Document Description XML (DDX) document, source documents, and external resources (strings and graphics). The DDX document provides instructions on how to use the source documents to produce a set of resultant documents. It enables you to create applications that let you:
@@ -16,7 +16,7 @@ info:
     The DDX Reference documentation is at [Communications – Document Manipulation APIs and DDX Reference](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf)
 
     # Before you start
-    Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to AEM as a Cloud Service. When you use service credential a techincal account is created on the first call.
+    Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to Adobe Experience Manager as a Cloud Service. When you use service credential a techincal account is created on the first call.
 
     # Set up Document manipulation sync APIs
     To setup Document manipulation sync APIs, see [Use synchronous processing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html)
@@ -28,7 +28,7 @@ info:
   version: 0.0.1
 
 servers:
-  - url: https://[AEM Forms Cloud Services Publish Instance].adobeaemcloud.com/
+  - url: https://[Adobe Experience Manager Forms Cloud Services Publish Instance].adobeaemcloud.com/
 tags:
   - name: Document manipulation Sync HTTP APIs
     description: Assembler Services Capabilities

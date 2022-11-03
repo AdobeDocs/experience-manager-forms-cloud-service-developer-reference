@@ -304,6 +304,7 @@ components:
         required to make authenticated requests to the PDF Utility Service.
         
         - [Configure Adobe Experience Manager Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
+
         - [Retrieve JWT Credentials from the Developer
         Console.](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/)
         - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)

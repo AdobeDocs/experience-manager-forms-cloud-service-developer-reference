@@ -1,6 +1,7 @@
 openapi: 3.0.3
 info:
   description: >
+
     Adobe Experience Manager Forms as a Cloud Service - Communications APIs.
 
 
@@ -22,12 +23,12 @@ info:
     These APIs help generate documents in bulk.  To setup you environment to use the APIs, see [Use batch processing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-batch-processing.html)
 
 
-
   title: Adobe Experience Manager Forms as a Cloud Service - Communications
   version: 1.0.0-oas3
 servers:
   - url: >-
       https://[Adobe Experience Manager Forms as a Cloud Services Author Instance].adobeaemcloud.com/adobe/forms/batch/output
+
 tags:
   - name: Communications Services
     description: Communications Services Capabilities
@@ -264,8 +265,8 @@ components:
           type: string
           description: >-
             The template defines appearance and behavior of the PDF document.
-            The API supports templates of format - XDP and PDF document. You can
-            specify a reference path of your Adobe Experience Manager Repository.
+            The API supports templates of format - XDP and PDF document. You can specify a reference path of your Adobe Experience Manager Repository.
+
         xci:
           type: string
           description: >-
@@ -274,7 +275,9 @@ components:
             when the template is of type XDP or an XDP-based PDF document.
         contentRoot:
           type: string
+
           description: Root location within an Adobe Experience Manager repository to resolve template from.
+
         pdfOutputOptions:
           $ref: '#/components/schemas/PDFOutputOptions'
           description: It contains detailled configuration parameters which allow control over PDF file generation.

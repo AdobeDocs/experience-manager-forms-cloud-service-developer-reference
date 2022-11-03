@@ -2,7 +2,8 @@
 openapi: 3.0.0
 info:
   description: |
-    Adobe Expereince Manager Forms as a Cloud Service - Communications.
+    Adobe Experience Manager Forms as a Cloud Service - Communications.
+
 
     # Introduction
 
@@ -22,8 +23,9 @@ info:
     You can find out more about document generation at [Introduction to Communication APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)
 
     # Before you start
+    
+    Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to Adobe Experience Manager as a Cloud Service. When you use service credential a techincal account is created on the first call.
 
-    Make user account of your developer or techincal account member of forms-user group. If you do not have a technical account, make a call to Adobe Expereince Manager as a Cloud Service. When you use service credential a techincal account is created on the first call.
 
     # Set up Communicaions APIs
 
@@ -34,10 +36,11 @@ info:
 
     <SecurityDefinitions />
 
-  title: Adobe Expereince Manager Forms as a Cloud Service - Communications
+  title: Adobe Experience Manager Forms as a Cloud Service - Communications
   version: 0.0.1
 servers:
-- url: https://[Adobe Expereince Manager Forms as a Cloud Services Publish Instance]
+- url: https://[Adobe Experience Manager Forms as a Cloud Services Publish Instance]
+
   description: Publish instance
 security:
 - Token-based authentication: []
@@ -227,7 +230,8 @@ components:
             The template defines appearance and behavior of the PDF document.
             The API supports templates of format: XDP and PDF
             document. You can specify a fully qualified path, reference path of
-            your Adobe Expereince Manager Repository, or path of a binary file.
+            your Adobe Experience Manager Repository, or path of a binary file.
+
           oneOf:
           - type: string
             format: binary
@@ -447,26 +451,28 @@ components:
       scheme: bearer
       bearerFormat: JWT
       description: |
-        In token-based authentication, an access token (Bearer authentication token) is required to make requests to Adobe Expereince Manager as a Cloud Service.
-        Adobe Expereince Manager Forms as a Cloud Service provides APIs to securely retrieve the access token.
+        In token-based authentication, an access token (Bearer authentication token) is required to make requests to Adobe Experience Manager as a Cloud Service.
+        Adobe Experience Manager Forms as a Cloud Service provides APIs to securely retrieve the access token.
         The end-to-end workflow for retrieving and using the token to authenticate a request is:
 
-        - [Retrieve Adobe Expereince Manager as a Cloud Service credentials from the Developer
+        - [Retrieve Adobe Experience Manager as a Cloud Service credentials from the Developer
         Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
 
-        - [Install Adobe Expereince Manager as a Cloud Service credentials on your
+        - [Install Adobe Experience Manager as a Cloud Service credentials on your
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-        (Application Server, Web Server, or other non-Adobe Expereince Manager servers) configured to
+        (Application Server, Web Server, or other non-Adobe Experience Manager servers) configured to
+
         send requests to (make calls) the cloud service.
 
         - [Generate a JWT token and exchanged it with Adobe IMS APIs for an
         access
         token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
 
-        - Run the Adobe Expereince Manager API with the access token as a Bearer Authentication
+        - Run the Adobe Experience Manager API with the access token as a Bearer Authentication
         token.
 
-        - [Set appropriate permissions for the technical account user in the Adobe Expereince Manager
+        - [Set appropriate permissions for the technical account user in the Adobe Experience Manager
+
         environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
     Basic authentication:
       type: https
@@ -475,4 +481,5 @@ components:
         Basic authentication is a simple authentication scheme built into the HTTP protocol.
         The client sends HTTP requests with the Authorization header that contains the word Basic followed by a space and a base64-encoded string username:password.
         For example, to authorize as admin / admin the client sends Basic [base64-encoded string username]: [base64-encoded string password].
-        For information about retrieving and using token, see [Token-based authentication to Adobe Expereince Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en)
+        For information about retrieving and using token, see [Token-based authentication to Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en)
+

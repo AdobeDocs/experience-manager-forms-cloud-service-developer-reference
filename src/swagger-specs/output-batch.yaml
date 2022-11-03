@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   description: >
-    Adobe Expereince Manager Forms as a Cloud Service - Communications APIs.
+    Adobe Experience Manager Forms as a Cloud Service - Communications APIs.
 
 
     # Introduction
@@ -23,11 +23,11 @@ info:
 
 
 
-  title: Adobe Expereince Manager Forms as a Cloud Service - Communications
+  title: Adobe Experience Manager Forms as a Cloud Service - Communications
   version: 1.0.0-oas3
 servers:
   - url: >-
-      https://[Adobe Expereince Manager Forms as a Cloud Services Author Instance].adobeaemcloud.com/adobe/forms/batch/output
+      https://[Adobe Experience Manager Forms as a Cloud Services Author Instance].adobeaemcloud.com/adobe/forms/batch/output
 tags:
   - name: Communications Services
     description: Communications Services Capabilities
@@ -265,7 +265,7 @@ components:
           description: >-
             The template defines appearance and behavior of the PDF document.
             The API supports templates of format - XDP and PDF document. You can
-            specify a reference path of your Adobe Expereince Manager Repository.
+            specify a reference path of your Adobe Experience Manager Repository.
         xci:
           type: string
           description: >-
@@ -274,7 +274,7 @@ components:
             when the template is of type XDP or an XDP-based PDF document.
         contentRoot:
           type: string
-          description: Root location within an Adobe Expereince Manager repository to resolve template from.
+          description: Root location within an Adobe Experience Manager repository to resolve template from.
         pdfOutputOptions:
           $ref: '#/components/schemas/PDFOutputOptions'
           description: It contains detailled configuration parameters which allow control over PDF file generation.

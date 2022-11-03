@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   description: |
-    The PDF Utilities service can convert between PDF and XDP file formats, retrieve PDF document properties. For example, before converting a PDF document to another format, it is useful to inspect its properties to determine which service operation to invoke for the conversion.
+    The PDF Utility service can convert between PDF and XDP file formats, retrieve PDF document properties. For example, before converting a PDF document to another format, it is useful to inspect its properties to determine which service operation to invoke for the conversion.
   title: PDF Utility Service
   version: 1.0.0
 servers:

@@ -458,22 +458,15 @@ components:
         - [Retrieve Adobe Experience Manager as a Cloud Service credentials from the Developer
         Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
 
-        - [Install Adobe Experience Manager as a Cloud Service credentials on your
-        environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
-        (Application Server, Web Server, or other non-Adobe Experience Manager servers) configured to
+        - [Install Adobe Experience Manager as a Cloud Service credentials on your environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
+        (Application Server, Web Server, or other non-Adobe Experience Manager servers) configured to send requests to (make calls) the cloud service.
 
-        send requests to (make calls) the cloud service.
-
-        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an
-        access
-        token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
+        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
 
         - Run the Adobe Experience Manager API with the access token as a Bearer Authentication
         token.
 
-        - [Set appropriate permissions for the technical account user in the Adobe Experience Manager
-
-        environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
+        - [Set appropriate permissions for the technical account user in the Adobe Experience Manager environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
     Basic authentication:
       type: https
       scheme: basic

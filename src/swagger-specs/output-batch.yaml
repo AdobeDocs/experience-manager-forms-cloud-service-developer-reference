@@ -23,8 +23,8 @@ info:
     These APIs help generate documents in bulk.  To setup you environment to use the APIs, see [Use batch processing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-batch-processing.html)
 
     # Download the definition file
-    The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/output-batch.yaml) and upload it to postman to check functionality of the APIs.
 
+    The API reference documentation is also available in the .yaml format. You can [download the .yaml for batch APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/output-batch.yaml) and upload it to postman to check functionality of the APIs.
 
   title: Adobe Experience Manager Forms as a Cloud Service - Communications
   version: 1.0.0-oas3

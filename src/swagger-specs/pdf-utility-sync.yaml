@@ -2,19 +2,19 @@
 openapi: 3.0.3
 info:
   description: |
-    The PDF Utility service can convert between PDF and XDP file formats, retrieve PDF document properties. For example, before converting a PDF document to another format, it is useful to inspect its properties to determine which service operation to invoke for the conversion.
+    The Document Utilities Synchronous APIs (PDF Utilities Service) can convert between PDF and XDP file formats, retrieve PDF document properties. For example, before converting a PDF document to another format, it is useful to inspect its properties to determine which service operation to invoke for the conversion.
   title: PDF Utility Service
-  version: 1.0.0
+  version: 0.0.1-experimental
 servers:
   - url: https://aemforms.adobe.io
-    description: Adobe Experience Manager Forms - Communications
+    description: AEM Forms - Communications
 tags:
   - name: Document Information
     description: APIs that provide information about PDF / XDP documents.
   - name: Document Conversion
     description: APIs that convert one type of documents into another
 x-tagGroups:
-  - name: Adobe Experience Manager Forms - Communications API
+  - name: AEM Forms - Communications API
     tags:
       - Document Information
       - Document Conversion
@@ -300,11 +300,10 @@ components:
       scheme: bearer
       bearerFormat: JWT
       description: |
-        An access token (Bearer authentication token) that is authorized to call the Adobe Experience Manager Forms - Communications APIs is
-        required to make authenticated requests to the PDF Utility Service.
+        An access token (Bearer authentication token) that is authorized to call the AEM Forms - Communications APIs is
+        required to make authenticated requests to the Document Utilities Synchronous APIs (PDF Utility Service).
         
-        - [Configure Adobe Experience Manager Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
-
+        - [Configure AEM Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
         - [Retrieve JWT Credentials from the Developer
         Console.](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/)
-        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
+        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?#create-a-jwt-and-exchange-for-an-access-token)

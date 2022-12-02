@@ -34,7 +34,7 @@ module.exports = {
         }, {
           title: 'PDF Utility Service',
           description: 'PDF Utility Service',
-          path: '/api/pdf-utility-service.md'
+          path: '/api/pdf-utility-sync.md'
         }]
       },
       {

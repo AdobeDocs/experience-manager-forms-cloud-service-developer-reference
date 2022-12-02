@@ -79,6 +79,6 @@ Use these APIs to generate multiple communications at scheduled intervals for pr
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
 
-[Document Utilities Synchronous APIs](references/pdf-utility-sync.md)
+[Document Utilities synchronous APIs](references/pdf-utility-sync.md)
 
 Use these APIs to convert an eligible PDF document to an XDP file (Form Design) or query information about a PDF document.

@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   description: |
-    The Document Utilities Synchronous APIs (PDF Utilities Service) can convert between PDF and XDP file formats, retrieve PDF document properties. For example, before converting a PDF document to another format, it is useful to inspect its properties to determine which service operation to invoke for the conversion.
+    The Document Utilities Synchronous APIs (PDF Utilities Service) provide ability to generate, convert, transform, and extract information from PDF and XDP file formats.
 
     # Download the definition file
     The API reference documentation is also available in the .yaml format. You can [download the .yaml for synchronous APIs](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/pdf-utility-sync.yaml) and upload it to postman to check functionality of the APIs.
@@ -305,9 +305,6 @@ components:
       bearerFormat: JWT
       description: |
         An access token (Bearer authentication token) that is authorized to call the AEM Forms - Communications APIs is
-        required to make authenticated requests to the Document Utilities Synchronous APIs (PDF Utility Service).
-        
-        - [Configure AEM Forms - Communications API in Developer Console](https://www.adobe.com/go/learn_aemforms_docprocessingsdk)
-        - [Retrieve JWT Credentials from the Developer
-        Console.](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/)
-        - [Generate a JWT token and exchanged it with Adobe IMS APIs for an access token.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?#create-a-jwt-and-exchange-for-an-access-token)
+        required to make authenticated requests to the Document Utilities Synchronous APIs (PDF Utility Service). For detailed information about authentication, see [Authenticate a multi-tenant API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html)
+
+      

@@ -4,6 +4,9 @@ info:
   description: |
     The AEM Forms - Communications APIs provide ability to generate, convert, 
     transform and extract information from PDF and XDP file formats.
+
+## Download the definition  file
+    You can [download the definition file](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/swagger-specs/output-batch.yaml) and upload it to [Postman](https://www.postman.com/) to check the functionality of the APIs.
   title: Adobe Experience Manager - Forms Communications API
   version: 1.0.0
 servers:

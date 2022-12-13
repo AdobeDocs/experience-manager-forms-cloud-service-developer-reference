@@ -306,3 +306,4 @@ components:
       description: |
         An access token (Bearer authentication token) that is authorized to call the AEM Forms - Communications APIs is required to make authenticated requests to the Document Utilities Synchronous APIs (PDF Utility Service). For detailed information about authentication, see [Authenticate a multi-tenant API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html)
 
+

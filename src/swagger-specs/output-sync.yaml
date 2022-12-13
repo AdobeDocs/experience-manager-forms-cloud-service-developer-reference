@@ -456,7 +456,7 @@ components:
         The end-to-end workflow for retrieving and using the token to authenticate a request is:
 
         - [Retrieve Adobe Experience Manager as a Cloud Service credentials from the Developer
-        Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
+        Console.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html)
 
         - [Install Adobe Experience Manager as a Cloud Service credentials on your environment.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
         (Application Server, Web Server, or other non-Adobe Experience Manager servers) configured to send requests to (make calls) the cloud service.

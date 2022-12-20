@@ -31,10 +31,6 @@ module.exports = {
           title: 'Document manipulation synchronous APIs',
           description: 'Document manipulation synchronous APIs',
           path: '/api/assembler-sync.md'
-        }, {
-          title: 'PDF Utility Service',
-          description: 'PDF Utility Service',
-          path: '/api/pdf-utility-sync.md'
         }]
       },
       {

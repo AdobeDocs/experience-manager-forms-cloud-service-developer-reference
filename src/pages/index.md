@@ -63,22 +63,18 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 ### API References
 
-[Document generation synchronous API](references/output-sync.md) 
+[Document Generation Synchronous API](references/output-sync.md) 
 
 Use these APIs to generate a communication on demand for print and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 
-[Document generation asynchronous APIs](references/output-batch.md) 
+[Document Generation Asynchronous APIs](references/output-batch.md) 
 
 Use these APIs to generate multiple communications at scheduled intervals for print and digital deliveries.
 
 <DiscoverBlock slots="link, text"/>
 
-[Document manipulation synchronous APIs](references/assembler-sync.md) 
+[Document Manipulation Synchronous APIs](references/assembler-sync.md) 
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
-
-[Document Utilities synchronous APIs](references/pdf-utility-sync.md)
-
-Use these APIs to convert an eligible PDF document to an XDP file (Form Design) or query information about a PDF document.

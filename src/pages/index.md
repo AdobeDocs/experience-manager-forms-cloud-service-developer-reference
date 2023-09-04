@@ -79,3 +79,9 @@ Use these APIs to generate multiple communications at scheduled intervals for pr
 
 Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain information about PDF documents.
 
+<DiscoverBlock slots="link, text"/>
+
+[Document Manipulation Synchronous APIs](references/docassurance.md) 
+
+Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
+

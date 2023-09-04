@@ -1,0 +1,1493 @@
+openapi: 3.0.3
+info:
+  title: AEM FaaCS - DocAssurance sync HTTP APIs
+  description: |
+    # Introduction
+    The DocAssurance service provides the ability to perform various digital signature or encryption operations with PDF documents, such as signing, certification, addition of signature fields, encryption, decryption etc.
+
+    You can find out more information about DocAssurance at
+    [Overview of AEM DocAssurance Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=en#doc-assurance-service).
+    Several APIs perform intricate operations on PDF documents and may employ specific terminology to accurately convey their intent. To understand these better, refer to the [PDF Specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf).
+
+    # Before you start
+    Create a user account for your developer or technical account member in the forms-user group.
+    If you do not have a technical account, make a call to AEM as a Cloud Service.
+    When you use a service credential, a technical account is created on the first call.
+  version: 0.0.1-experimental
+externalDocs:
+  description: Overview of AEM Document Services
+  url: https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=en#
+servers:
+- url: /adobe/forms/document
+security:
+- BearerAuth: []
+tags:
+- name: Document Assurance
+  description: |
+    Digital signature and encryption-related operations with PDF documents.
+paths:
+  /assure/encrypt:
+    put:
+      tags:
+      - Document Assurance
+      summary: |
+        Remove the Password based encryption from the supplied PDF document.
+      requestBody:
+        $ref: '#/components/requestBodies/DecryptRequest'
+      responses:
+        "200":
+          description: |
+            Operation successful. The decrypted PDF document is included in the response.
+          content:
+            application/pdf:
+              schema:
+                $ref: '#/components/schemas/InlineDocument'
+        "202":
+          description: |
+            The request is accepted and the result can be checked at the location specified in the header.
+          headers:
+            Location:
+              $ref: '#/components/headers/Location'
+        "400":
+          description: |
+            Bad request.
+            The request was invalid or cannot be served.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: |
+            Internal server error.
+            The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      tags:
+      - Document Assurance
+      summary: |
+        Encrypt the supplied PDF document using Password based encryption.
+      requestBody:
+        $ref: '#/components/requestBodies/EncryptRequest'
+      responses:
+        "200":
+          description: |
+            Operation successful. The encrypted PDF document is included in the response.
+          content:
+            application/pdf:
+              schema:
+                $ref: '#/components/schemas/InlineDocument'
+        "202":
+          description: |
+            The request is accepted and the result can be checked at the location specified in the header.
+          headers:
+            Location:
+              $ref: '#/components/headers/Location'
+        "400":
+          description: |
+            Bad request.
+            The request was invalid or cannot be served.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: |
+            Internal server error.
+            The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /assure/inspect:
+    post:
+      tags:
+      - Document Assurance
+      summary: |
+        Fetch the type of security used in the supplied PDF document.
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityRequest'
+      responses:
+        "200":
+          description: |
+            Operation successful. The security type used in the supplied PDF document is included in the response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecurityInfo'
+        "202":
+          description: |
+            The request is accepted and the result can be checked at the location specified in the header.
+          headers:
+            Location:
+              $ref: '#/components/headers/Location'
+        "400":
+          description: |
+            Bad request.
+            The request was invalid or cannot be served.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: |
+            Internal server error.
+            The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /assure/sign:
+    post:
+      tags:
+      - Document Assurance
+      summary: |
+        Sign the specified signature field in the supplied PDF document.
+      requestBody:
+        $ref: '#/components/requestBodies/SignRequest'
+      responses:
+        "200":
+          description: |
+            Operation successful.
+            The signed PDF document is included in the response.
+          content:
+            application/pdf:
+              schema:
+                $ref: '#/components/schemas/InlineDocument'
+        "202":
+          description: |
+            The request is accepted and the result can be checked at the location specified in the header.
+          headers:
+            Location:
+              $ref: '#/components/headers/Location'
+        "400":
+          description: |
+            Bad request.
+            The request was invalid or cannot be served.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: |
+            Internal server error.
+            The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /assure/certify:
+    post:
+      tags:
+      - Document Assurance
+      summary: |
+        Certify the supplied PDF document.
+      requestBody:
+        $ref: '#/components/requestBodies/CertifyRequest'
+      responses:
+        "200":
+          description: |
+            Operation successful.
+            The certified PDF document is included in the response.
+          content:
+            application/pdf:
+              schema:
+                $ref: '#/components/schemas/InlineDocument'
+        "202":
+          description: |
+            The request is accepted and the result can be checked at the location specified in the header.
+          headers:
+            Location:
+              $ref: '#/components/headers/Location'
+        "400":
+          description: |
+            Bad request.
+            The request was invalid or cannot be served.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: |
+            Internal server error.
+            The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /assure/signfield:
+    post:
+      tags:
+      - Document Assurance
+      summary: |
+        Add a signature field to the supplied PDF document.
+      requestBody:
+        $ref: '#/components/requestBodies/AddSignFieldRequest'
+      responses:
+        "200":
+          description: |
+            Operation successful.
+            The signature field has been added and the updated PDF document is included in the response.
+          content:
+            application/pdf:
+              schema:
+                $ref: '#/components/schemas/InlineDocument'
+        "202":
+          description: |
+            The request is accepted and the result can be checked at the location specified in the header.
+          headers:
+            Location:
+              $ref: '#/components/headers/Location'
+        "400":
+          description: |
+            Bad request.
+            The request was invalid or cannot be served.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: |
+            Internal server error.
+            The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    DecryptRequest:
+      required:
+      - config
+      - document
+      type: object
+      properties:
+        document:
+          description: |
+            A PDF document to be decrypted.
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+          - $ref: '#/components/schemas/HttpUrl'
+          - $ref: '#/components/schemas/InlineDocument'
+          - $ref: '#/components/schemas/RepoDocument'
+        config:
+          type: string
+          description: |
+            Document open or permission password for removing encryption from the document
+          format: password
+      example:
+        document: /content/dam/formsanddocuments/sample/sample.pdf
+        config: openPassword
+    InlineDocument:
+      type: string
+      description: |
+        An inline document
+      format: binary
+    Error:
+      type: object
+      properties:
+        type:
+          type: string
+          description: |
+            A URI reference that identifies the problem type
+            and points to human-readable documentation.
+        title:
+          type: string
+          description: |
+            A short, human-readable summary of the problem type.
+        status:
+          maximum: 599
+          minimum: 100
+          type: integer
+          description: |
+            The HTTP status code generated by the origin server.
+        detail:
+          type: string
+          description: |
+            A human-readable explanation of this occurrence.
+        instance:
+          type: string
+          description: |
+            A URI reference that identifies the specific occurrence of the problem.
+      description: |
+        RFC 7807 compliant problem details.
+    EncryptRequest:
+      required:
+      - config
+      - document
+      type: object
+      properties:
+        document:
+          description: |
+            A PDF document to be encrypted.
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+          - $ref: '#/components/schemas/HttpUrl'
+          - $ref: '#/components/schemas/InlineDocument'
+          - $ref: '#/components/schemas/RepoDocument'
+        config:
+          $ref: '#/components/schemas/EncryptConfig'
+        options:
+          $ref: '#/components/schemas/EncryptOptions'
+      example:
+        document: (... sample.pdf file contents ...)
+        config:
+          mode: ENCRYPT_WITH_PASSWORD
+          params:
+            openPassword: openPassword
+            permPassword: permissionPassword
+            permissions:
+            - PRINT_HIGH
+            - PRINT_LOW
+        options:
+          parts: ALL
+          compatibility: ACROBAT_10
+    EncryptConfig:
+      type: object
+      properties:
+        mode:
+          $ref: '#/components/schemas/EncryptionMode'
+        params:
+          $ref: '#/components/schemas/PasswordEncrypt'
+      description: |
+        Specifies how to encrypt the document.
+      example:
+        mode: ENCRYPT_WITH_PASSWORD
+        params:
+          openPassword: openPassword
+          permPassword: permissionPassword
+          permissions:
+          - PRINT_HIGH
+          - PRINT_LOW
+    PasswordEncrypt:
+      type: object
+      properties:
+        openPassword:
+          type: string
+          description: "Specifies the password required to open the PDF document.\
+            \  \nThis should be different from `permPassword`.\n"
+          format: password
+        permPassword:
+          type: string
+          description: "Specifies the password required to modify or remove permissions\
+            \ from the PDF document.  \nThis should be different from `openPassword`.\n"
+          format: password
+        permissions:
+          type: array
+          description: |
+            Specifies the permissions granted to a user on opening an encrypted PDF document.
+          items:
+            $ref: '#/components/schemas/EncryptPermissions'
+      description: |
+        Specifies the password(s) and permission(s) to be used by password-based encryption.
+      example:
+        openPassword: openPassword
+        permPassword: permissionPassword
+        permissions:
+        - PRINT_HIGH
+        - PRINT_LOW
+    EncryptOptions:
+      type: object
+      properties:
+        parts:
+          $ref: '#/components/schemas/PdfParts'
+        compatibility:
+          $ref: '#/components/schemas/AcrobatVersion'
+      description: |
+        Specifies miscellaneous encryption options.
+      example:
+        parts: ALL_EXCEPT_METADATA
+        compatibility: ACROBAT_10
+    SecurityRequest:
+      required:
+      - document
+      type: object
+      properties:
+        document:
+          description: |
+            A PDF document whose security type should be retrieved.
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+          - $ref: '#/components/schemas/HttpUrl'
+          - $ref: '#/components/schemas/InlineDocument'
+          - $ref: '#/components/schemas/RepoDocument'
+      example:
+        document: (... acroform_sample.pdf file contents ...)
+    SecurityInfo:
+      type: object
+      properties:
+        mode:
+          $ref: '#/components/schemas/SecurityMode'
+      description: |
+        Information about the security used in the PDF document.
+      example:
+        mode: NONE
+    SignRequest:
+      required:
+      - credential
+      - document
+      - field
+      type: object
+      properties:
+        document:
+          description: |
+            A PDF document to be signed.
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+          - $ref: '#/components/schemas/HttpUrl'
+          - $ref: '#/components/schemas/InlineDocument'
+          - $ref: '#/components/schemas/RepoDocument'
+        credential:
+          $ref: '#/components/schemas/CredentialInfo'
+        field:
+          type: string
+          description: "The name of the signature field to be signed.  \n\nThe fully\
+            \ qualified name of the signature field should be specified. When using\
+            \ a PDF document that is based on an XFA form, then the partial name of\
+            \ the signature field can be used.\nFor example, `form1[0].#subform[1].SignatureField3[3]`\
+            \ can be specified as `SignatureField3[3]`.\n"
+        options:
+          $ref: '#/components/schemas/SignOptions'
+      example:
+        document: (... acroform_sample.pdf file contents ...)
+        credential:
+          alias: test_alias
+        field: SignatureField1
+        options:
+          reason: This document is signed pursuant to agreement on the contract between
+            parties X and Y.
+          location: "San Jose, California 95110"
+          contact: test@adobe.com
+          digestMethod: SHA256
+          revocation:
+            order: OCSP_FIRST
+            enforceEmbedding: false
+            embed: true
+            maxSize: 10
+          appearance:
+            type: NAME
+            signingFormat: CADES
+            logo:
+              pdf: (... Base64-encoded logo.pdf file contents ...)
+              opacity: 0.5
+            graphic:
+              pdf: (... Base64-encoded graphic.pdf file contents ...)
+            display:
+              name: true
+              location: true
+              dn: true
+              reason: true
+              date: true
+              labels: true
+              defaultLogo: false
+            textDirection: AUTO
+          unlock:
+            encryption: PASSWORD_BASED_ENCRYPT
+            unlockWith: openPassword
+    CertifyRequest:
+      required:
+      - credential
+      - document
+      - field
+      type: object
+      properties:
+        document:
+          description: |
+            A PDF document to be certified.
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+          - $ref: '#/components/schemas/HttpUrl'
+          - $ref: '#/components/schemas/InlineDocument'
+          - $ref: '#/components/schemas/RepoDocument'
+        credential:
+          $ref: '#/components/schemas/CredentialInfo'
+        field:
+          type: string
+          description: |
+            The name of the certifying signature field.
+
+            The fully qualified name of the signature field should be specified. When using a PDF document that is based on an XFA form, then the partial name of the signature field can also be used.
+            For example, `form1[0].#subform[1].SignatureField3[3]` can be specified as `SignatureField3[3]`.
+        options:
+          $ref: '#/components/schemas/CertifyOptions'
+      example:
+        document: /content/dam/formsanddocuments/sample/xfaform_sample.pdf
+        credential:
+          alias: testalias
+        field: "data[0].form_name[0].Manager[0].team[0].signfield[0]"
+        options:
+          reason: This document is signed pursuant to agreement on the contract between
+            parties X and Y.
+          location: "San Jose, CA 95110-2704"
+          contact: 408-536-6000
+          digestMethod: SHA256
+          revocation:
+            order: CRL_FIRST
+            enforceEmbedding: true
+            embed: true
+            maxSize: 10
+          appearance:
+            type: NAME
+            signingFormat: PKCS7_DETACHED
+            logo:
+              pdf: (... Base64-encoded logo.pdf file contents ...)
+              opacity: 0.5
+            graphic:
+              pdf: (... Base64-encoded graphic.pdf file contents ...)
+            display:
+              name: true
+              location: true
+              dn: true
+              reason: true
+              date: true
+              labels: true
+              defaultLogo: true
+            textDirection: AUTO
+          unlock:
+            encryption: PASSWORD_BASED_ENCRYPT
+            unlockWith: openPassword
+          legalAttestation: The undersigned witnesses testify that party X has submitted
+            16 annotations and party Y has submitted 11 media actions (7 movie actions
+            + 4 sound actions) to the PDF document as supporting evidence respectively.
+          lockField: true
+          permissions: NO_CHANGES
+    CertifyOptions:
+      description: |
+        Specific configuration to control certification behavior.
+      allOf:
+      - $ref: '#/components/schemas/SignOptions'
+      - type: object
+        properties:
+          legalAttestation:
+            type: string
+            description: |
+              An attestation explaining the presence of any entries in the legal attestation dictionary or content affecting the legal integrity of the document.
+          lockField:
+            type: boolean
+            description: |
+              Specifies whether the field should be locked after certification.
+            default: false
+          permissions:
+            $ref: '#/components/schemas/MdpPermissions'
+        example:
+          reason: This document is signed pursuant to agreement on the contract between
+            parties X and Y.
+          location: "San Jose, CA 95110-2704"
+          contact: test@adobe.com
+          digestMethod: SHA256
+          revocation:
+            order: OCSP_FIRST
+            enforceEmbedding: false
+            embed: true
+            maxSize: 10
+          appearance:
+            type: NAME
+            signingFormat: PKCS7_DETACHED
+            logo:
+              pdf: (... Base64-encoded logo.pdf file contents ...)
+              opacity: 0.5
+            graphic:
+              pdf: (... Base64-encoded graphic.pdf file contents ...)
+            display:
+              name: true
+              location: true
+              dn: true
+              reason: true
+              date: true
+              labels: true
+              defaultLogo: true
+            textDirection: AUTO
+          unlock:
+            encryption: PASSWORD_BASED_ENCRYPT
+            unlockWith: openPassword
+          legalAttestation: The undersigned witnesses testify that party X has submitted
+            16 annotations and party Y has submitted 11 media actions (7 movie actions
+            + 4 sound actions) to the PDF document as supporting evidence respectively.
+          lockField: true
+          permissions: NO_CHANGES
+    AddSignFieldRequest:
+      required:
+      - document
+      - field
+      type: object
+      properties:
+        document:
+          description: |
+            A PDF document to which this signature field should be added.
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+          - $ref: '#/components/schemas/HttpUrl'
+          - $ref: '#/components/schemas/InlineDocument'
+          - $ref: '#/components/schemas/RepoDocument'
+        field:
+          type: string
+          description: |
+            The name of the signature field to be added to the supplied PDF document.
+        rectangle:
+          $ref: '#/components/schemas/Rectangle'
+        page:
+          minimum: 1
+          type: integer
+          description: |
+            The page number of the supplied PDF document to which the visible signature field should be added.
+          default: 1
+        options:
+          $ref: '#/components/schemas/SignFieldOptions'
+      example:
+        document: crx:///content/dam/formsanddocuments/sample/sample.pdf
+        field: "data[0].form_name[0].Manager[0].team[0].signfield[0]"
+        rectangle:
+          lowerLeftX: 0
+          lowerLeftY: 0
+          width: 0
+          height: 0
+        page: 1
+        options:
+          seedValue:
+            certSeedValue:
+              flags: 0
+              issuerCerts:
+              - (... Base64-encoded certificate1.cer file contents ...)
+              - (... Base64-encoded certificate2.cer file contents ...)
+              subjectCerts:
+              - (... Base64-encoded certificate3.cer file contents ...)
+              - (... Base64-encoded certificate4.cer file contents ...)
+              objectIds:
+              - 1.2.840.113549.1.9.16.2.14
+              keyUsageExtns:
+              - digitalSignature
+              - cRLSign
+              subjects:
+              - cn: test
+                email: test@test.com
+            filter: Adobe.PPKLite
+            flags: 0
+            legalAttestations:
+            - The undersigned witnesses testify that party X has submitted 16 annotations
+              and party Y has submitted 11 media actions (7 movie actions + 4 sound
+              actions) to the PDF document as supporting evidence respectively.
+            permissions: NO_CHANGES
+            reasons:
+            - This document is signed pursuant to agreement on the contract between
+              parties X and Y.
+            subFilter:
+            - adbe.pkcs7.detached
+            timestamp:
+              required: true
+              url: https://timestamp.server.url
+            digestMethod: SHA256
+            revocationCheck: true
+          fieldMdp:
+            filter: INCLUDE
+            fields:
+            - "data[0].form_name[0].Manager[0].team[0].signfield[0]"
+            - "data[0].form_name[0].Manager[0].team[0].signfield[1]"
+          unlock:
+            encryption: PASSWORD_BASED_ENCRYPT
+            unlockWith: openPassword
+    Rectangle:
+      type: object
+      properties:
+        lowerLeftX:
+          minimum: 0
+          type: integer
+          description: |
+            Defines the lower left x co-ordinate of the signature field.
+          default: 0
+        lowerLeftY:
+          minimum: 0
+          type: integer
+          description: |
+            Defines the lower left y co-ordinate of the signature field.
+          default: 0
+        width:
+          minimum: 0
+          type: integer
+          description: |
+            Defines the width of signature field.
+          default: 0
+        height:
+          minimum: 0
+          type: integer
+          description: |
+            Defines the height of signature field.
+          default: 0
+      description: "Defines the co-ordinates of the signature field.  \nThe default\
+        \ position indicates an invisible signature field.\n"
+      example:
+        lowerLeftX: 0
+        lowerLeftY: 0
+        width: 25
+        height: 30
+    SignFieldOptions:
+      type: object
+      properties:
+        seedValue:
+          $ref: '#/components/schemas/SeedValueOptions'
+        fieldMdp:
+          $ref: '#/components/schemas/MdpOptions'
+        unlock:
+          $ref: '#/components/schemas/UnlockOptions'
+      description: |
+        Options to control the behavior of the signature field modification operation.
+      example:
+        seedValue:
+          certSeedValue:
+            flags: 0
+            issuerCerts:
+            - (... Base64-encoded certificate1.cer file contents ...)
+            - (... Base64-encoded certificate2.cer file contents ...)
+            subjectCerts:
+            - (... Base64-encoded certificate3.cer file contents ...)
+            - (... Base64-encoded certificate4.cer file contents ...)
+            objectIds:
+            - 1.2.840.113549.1.9.16.2.14
+            keyUsageExtns:
+            - digitalSignature
+            - cRLSign
+            subjects:
+            - cn: test
+              email: test@test.com
+          filter: Adobe.PPKLite
+          flags: 0
+          legalAttestations:
+          - The undersigned witnesses testify that party X has submitted 16 annotations
+            and party Y has submitted 11 media actions (7 movie actions + 4 sound
+            actions) to the PDF document as supporting evidence respectively.
+          permissions: NO_CHANGES
+          reasons:
+          - This document is signed pursuant to agreement on the contract between
+            parties X and Y.
+          subFilter:
+          - adbe.pkcs7.detached
+          timestamp:
+            required: true
+            url: https://timestamp.server.url
+          digestMethod: SHA256
+          revocationCheck: true
+        fieldMdp:
+          filter: EXCLUDE
+          fields:
+          - "data[0].form_name[0].Manager[0].team[0].signfield[0]"
+          - "signfield[1]"
+        unlock:
+          encryption: PASSWORD_BASED_ENCRYPT
+          unlockWith: openPassword
+    HttpUrl:
+      pattern: "^(http:\\/\\/|https:\\/\\/)[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*(\\.[a-z]{2,5})?(:[0-9]{1,5})?(\\\
+        /.*)?$"
+      type: string
+      description: |
+        An HTTP/s URL.
+    RepoDocument:
+      oneOf:
+      - $ref: '#/components/schemas/RepoPath'
+      - $ref: '#/components/schemas/RepoUrl'
+    RepoPath:
+      pattern: "^(\\/content)(\\/[^/]+)+$"
+      type: string
+      description: |
+        A repository path under /content.
+    RepoUrl:
+      pattern: "^(crx:\\/\\/)(\\/[^/]+)+$"
+      type: string
+      description: |
+        A repository URL (e.g. crx:///path/to/object).
+    EncryptionMode:
+      type: string
+      description: |
+        Specifies the encryption mode to use for encrypting PDF document.
+      example: ENCRYPT_WITH_PASSWORD
+      enum:
+      - ENCRYPT_WITH_PASSWORD
+    EncryptPermissions:
+      type: string
+      description: "Defines the permissions that can be granted.  \n\n`ALL_PERM` Specifies\
+        \ all permissions.  \n`EDIT_ADD` Specifies the permission that enables users\
+        \ to add form data.  \n`EDIT_ASSEMBLE` Specifies the permission that enables\
+        \ users to assemble PDF documents.  \n`EDIT_COPY` Specifies the permission\
+        \ that enables users to copy form data.  \n`EDIT_EXTRACT` Specifies the permission\
+        \ that enables users to extract data from forms.  \n`EDIT_FORM_FILL` Specifies\
+        \ the permission that enables users to fill in forms.  \n`EDIT_MODIFY` Specifies\
+        \ the permission that enables the users to edit the PDF document.  \n`PRINT_HIGH`\
+        \ Allows high-resolution printing of documents.  \n`PRINT_LOW` Allows low-resolution\
+        \ printing of documents.  \n`PRINT_NONE` Does not allow printing of documents.\n"
+      example: ALL_PERM
+      enum:
+      - ALL_PERM
+      - EDIT_ADD
+      - EDIT_COPY
+      - EDIT_ASSEMBLE
+      - EDIT_EXTRACT
+      - EDIT_FORM_FILL
+      - EDIT_MODIFY
+      - PRINT_HIGH
+      - PRINT_LOW
+      - PRINT_NONE
+    PdfParts:
+      type: string
+      description: "Specifies which parts (or resources) of the PDF document should\
+        \ be encrypted.  \n\nYou can encrypt the entire PDF document (`ALL`) or everything\
+        \ except metadata (`ALL_EXCEPT_METADATA`) or only the attachments (`ATTACHMENTS_ONLY`).\n"
+      example: ALL
+      enum:
+      - ALL
+      - ALL_EXCEPT_METADATA
+      - ATTACHMENTS_ONLY
+      default: ALL
+    AcrobatVersion:
+      type: string
+      description: |
+        Specifies the earliest version of Acrobat with which the encryption is compatible.
+      example: ACROBAT_10
+      enum:
+      - ACROBAT_6
+      - ACROBAT_7
+      - ACROBAT_10
+      default: ACROBAT_7
+    SecurityMode:
+      type: string
+      description: "Specifies the security mode used in the PDF document.  \n\nThe\
+        \ following are valid encryption type values:  \n\n`PASSWORD` The PDF document\
+        \ is secured with a password.  \n`POLICY_SERVER` The PDF document is secured\
+        \ with a Rights Management policy.  \n`CERTIFICATE` The PDF document is secured\
+        \ with certificate-based encryption.  \n`OTHER` The PDF document is secured\
+        \ with another type of encryption.  \n`NONE` The PDF document is not secured.\n"
+      example: NONE
+      enum:
+      - PASSWORD
+      - POLICY_SERVER
+      - CERTIFICATE
+      - OTHER
+      - NONE
+    CredentialInfo:
+      type: object
+      properties:
+        alias:
+          type: string
+          description: |
+            The alias of a credential defined in AEM's HSM credential configuration.
+      description: |
+        Provides information about a credential.
+      example:
+        alias: testalias
+    SignOptions:
+      description: |
+        Specifies configuration for signing and certification.
+      example:
+        reason: This document is signed pursuant to agreement on the contract between
+          parties X and Y.
+        location: "San Jose, California 95110"
+        contact: test@adobe.com
+        digestMethod: SHA256
+        revocation:
+          order: OCSP_FIRST
+          enforceEmbedding: false
+          embed: true
+          maxSize: 10
+        appearance:
+          type: NAME
+          signingFormat: PKCS7_DETACHED
+          logo:
+            pdf: (... Base64-encoded logo.pdf file contents ...)
+            opacity: 0.5
+          graphic:
+            pdf: (... Base64-encoded graphic.pdf file contents ...)
+          display:
+            name: true
+            location: true
+            dn: true
+            reason: true
+            date: true
+            labels: true
+            defaultLogo: true
+          textDirection: AUTO
+        unlock:
+          encryption: PASSWORD_BASED_ENCRYPT
+          unlockWith: openPassword
+      allOf:
+      - $ref: '#/components/schemas/SignCommon'
+      - type: object
+        properties:
+          digestMethod:
+            $ref: '#/components/schemas/DigestMethod'
+          revocation:
+            $ref: '#/components/schemas/RevocationConfig'
+          appearance:
+            $ref: '#/components/schemas/SignAppearance'
+          unlock:
+            $ref: '#/components/schemas/UnlockOptions'
+    SignCommon:
+      type: object
+      properties:
+        reason:
+          type: string
+          description: |
+            The reason for signing the PDF document.
+        location:
+          type: string
+          description: |
+            The geographical location of the signing.
+        contact:
+          type: string
+          description: |
+            The contact information associated with the signature.
+      example:
+        reason: This document is signed pursuant to agreement on the contract between
+          parties X and Y.
+        location: "San Jose, California 95110"
+        contact: test@adobe.com
+    DigestMethod:
+      type: string
+      description: |
+        Hashing algorithm for sign/certify.
+      enum:
+      - SHA256
+      - SHA384
+      - SHA512
+      default: SHA256
+    RevocationConfig:
+      type: object
+      properties:
+        order:
+          type: string
+          enum:
+          - OCSP_FIRST
+          - CRL_FIRST
+          default: OCSP_FIRST
+        enforceEmbedding:
+          type: boolean
+          description: "Specifies whether a signing or certification operation will\
+            \ fail if valid revocation information is not embedded for all certificates.\
+            \  \n\nIf a certificate does not contain any CRL or OCSP information,\
+            \ it is considered valid even though no revocation information can be\
+            \ retrieved from it.\n"
+          default: false
+        embed:
+          type: boolean
+          description: |
+            Specifies whether revocation information, if available, will be embedded with the signature.
+          default: true
+        maxSize:
+          maximum: 10240
+          exclusiveMaximum: false
+          minimum: 0
+          type: integer
+          description: |
+            Specifies the maximum size (in kilobytes) of the revocation information that can be embedded in a signature.
+          default: 100
+      description: |
+        Specifies revocation configuration for sign and certify operations.
+      example:
+        order: OCSP_FIRST
+        enforceEmbedding: false
+        embed: true
+        maxSize: 10
+    SignAppearance:
+      type: object
+      properties:
+        type:
+          type: string
+          description: |
+            Specifies the visual appearance of a signature.
+          enum:
+          - NOGRAPHIC
+          - GRAPHIC
+          - NAME
+          default: NAME
+        signingFormat:
+          type: string
+          description: |
+            Specifies the signing format for the digital signature.
+          enum:
+          - PKCS7_DETACHED
+          - CADES
+          default: PKCS7_DETACHED
+        logo:
+          $ref: '#/components/schemas/SignLogo'
+        graphic:
+          $ref: '#/components/schemas/SignGraphic'
+        display:
+          $ref: '#/components/schemas/SignDisplayOptions'
+        textDirection:
+          type: string
+          description: |
+            Specifies the direction of the signature's text.
+          enum:
+          - AUTO
+          - LTR
+          - RTL
+          default: AUTO
+      description: |
+        Defines the appearance of a signature.
+      example:
+        type: NAME
+        signingFormat: PKCS7_DETACHED
+        logo:
+          pdf: (... Base64-encoded logo.pdf file contents ...)
+          opacity: 0.5
+        graphic:
+          pdf: (... Base64-encoded graphic.pdf file contents ...)
+        display:
+          name: true
+          location: true
+          dn: true
+          reason: true
+          date: true
+          labels: true
+          defaultLogo: true
+        textDirection: AUTO
+    SignLogo:
+      type: object
+      properties:
+        pdf:
+          type: string
+          description: |
+            The signature's logo as a Base64-encoded PDF document.
+          format: byte
+        opacity:
+          maximum: 1
+          exclusiveMaximum: false
+          minimum: 0
+          type: number
+          description: |
+            Specifies the opacity of the signature's logo.
+          format: double
+          default: 0.5
+      description: |
+        Specifies the look and feel of a signature's logo.
+      example:
+        pdf: (... Base64-encoded logo.pdf file contents ...)
+        opacity: 0.5
+    SignGraphic:
+      type: object
+      properties:
+        pdf:
+          type: string
+          description: |
+            A graphical representation of the signature as a Base64-encoded PDF document. This is required if type is `GRAPHIC`, and is ignored otherwise.
+          format: byte
+      description: |
+        Specifies the graphical representation of the signature.
+      example:
+        pdf: (... Base64-encoded graphic.pdf file contents ...)
+    SignDisplayOptions:
+      type: object
+      properties:
+        name:
+          type: boolean
+          description: |
+            Specifies whether to show the name associated with the certificate.
+          default: true
+        location:
+          type: boolean
+          description: |
+            Specifies whether to show the signing location.
+          default: true
+        dn:
+          type: boolean
+          description: |
+            Specifies whether to show the subject and issuer distinguished names (DNs) contained within the certificate.
+          default: true
+        reason:
+          type: boolean
+          description: |
+            Specifies whether to show the reason given for signing.
+          default: true
+        date:
+          type: boolean
+          description: |
+            Specifies whether to show the signing date.
+          default: true
+        labels:
+          type: boolean
+          description: |
+            Specifies whether to show the signature's label(s).
+          default: true
+        defaultLogo:
+          type: boolean
+          description: |
+            Specifies whether to show the signature's default logo.
+          default: true
+      description: |
+        Specifies the information to be displayed for a signature.
+      example:
+        name: true
+        location: true
+        dn: true
+        reason: true
+        date: false
+        labels: false
+        defaultLogo: true
+    MdpPermissions:
+      type: string
+      description: |
+        Specifies the DocMDP (Document Modification Detection and Prevention) permissions that define the operation(s) permitted after a document is certified.
+      example: NO_CHANGES
+      enum:
+      - NO_CHANGES
+      - FORM_CHANGES
+      - ANNOTATION_FORM_CHANGES
+      - NON_AUTHOR_SIGNATURE
+      default: FORM_CHANGES
+    SeedValueOptions:
+      type: object
+      properties:
+        certSeedValue:
+          $ref: '#/components/schemas/CertSeedValue'
+        filter:
+          type: string
+          description: |
+            Specifies a signature handler for the field.
+        flags:
+          type: integer
+          description: |
+            A set of bit flags specifying the interpretation of specific
+            entries in this dictionary.
+          format: int32
+          default: 0
+        legalAttestations:
+          type: array
+          description: |
+            Specifies a list of legal attestations associated with this field.
+          items:
+            type: string
+        permissions:
+          $ref: '#/components/schemas/MdpPermissions'
+        reasons:
+          type: array
+          description: |
+            Specifies a list of possible reasons for signing the document.
+          items:
+            type: string
+        subFilter:
+          type: array
+          description: |
+            Specifies a list of encodings to use when signing.
+          items:
+            type: string
+        timestamp:
+          $ref: '#/components/schemas/Timestamp'
+        digestMethod:
+          type: array
+          description: |
+            Specifies a list of digest algorithms acceptable for signing.
+          items:
+            $ref: '#/components/schemas/DigestMethod'
+        revocationCheck:
+          type: boolean
+          description: |
+            Specifies whether to enable revocation checking and embed it when signing the field.
+          default: false
+      description: |
+        Specifies entries for a signature field's Seed Value (SV) dictionary, which contains constraining information that shall be used when this field is signed.
+      example:
+        certSeedValue:
+          flags: 0
+          issuerCerts:
+          - (... Base64-encoded certificate1.cer file contents ...)
+          - (... Base64-encoded certificate2.cer file contents ...)
+          subjectCerts:
+          - (... Base64-encoded certificate3.cer file contents ...)
+          - (... Base64-encoded certificate4.cer file contents ...)
+          objectIds:
+          - 1.2.840.113549.1.9.16.2.14
+          keyUsageExtns:
+          - digitalSignature
+          - cRLSign
+          subjects:
+          - cn: test
+            email: test@test.com
+        filter: Adobe.PPKLite
+        flags: 0
+        legalAttestations:
+        - The undersigned witnesses testify that party X has submitted 16 annotations
+          and party Y has submitted 11 media actions (7 movie actions + 4 sound actions)
+          to the PDF document as supporting evidence respectively.
+        permissions: NO_CHANGES
+        reasons:
+        - This document is signed pursuant to agreement on the contract between parties
+          X and Y.
+        subFilter:
+        - ETSI.CAdES.detached
+        timestamp:
+          required: true
+          url: https://timestamp.server.url
+        digestMethod: SHA256
+        revocationCheck: true
+    CertSeedValue:
+      type: object
+      properties:
+        flags:
+          type: integer
+          description: |
+            A set of bit flags specifying the interpretation of specific entries in this dictionary.
+          format: int32
+          default: 0
+        issuerCerts:
+          type: array
+          description: |
+            Specifies a list of Base64-encoded X.509v3 certificates of acceptable issuers. The signer's certificate must refer to any of these issuers for it to be considered acceptable for signing. This list may contain self-signed certificates.
+          items:
+            $ref: '#/components/schemas/InlineB64Document'
+        subjectCerts:
+          type: array
+          description: |
+            Specifies a list of Base64-encoded X.509v3 certificates that are acceptable for signing.
+          items:
+            $ref: '#/components/schemas/InlineB64Document'
+        objectIds:
+          type: array
+          description: |
+            Specifies a list of Object Identifiers (OIDs) of certificate policies that must be present in the signing certificate. This list is considered only when issuers is non-empty.
+          items:
+            type: string
+        keyUsageExtns:
+          type: array
+          description: |
+            Specifies a list of key-usage extensions that must be present in the signing certificate.
+          items:
+            type: string
+        subjects:
+          type: array
+          description: |
+            Specifies a list of dictionaries, each representing a Subject Distinguished Name (DN) that must be present in the signing certificate.
+            The certificate used for the signature must contain all the attributes specified in the dictionary.
+          items:
+            type: object
+            additionalProperties:
+              type: string
+      description: |
+        Specifies entries for a signature field's certificate seed value (SVCert) dictionary, which contains information about the certificate that shall be used when this field is signed.
+      example:
+        flags: 0
+        issuerCerts:
+        - (... Base64-encoded certificate1.cer file contents ...)
+        - (... Base64-encoded certificate2.cer file contents ...)
+        subjectCerts:
+        - (... Base64-encoded certificate3.cer file contents ...)
+        - (... Base64-encoded certificate4.cer file contents ...)
+        objectIds:
+        - 1.2.840.113549.1.9.16.2.14
+        keyUsageExtns:
+        - digitalSignature
+        - cRLSign
+        subjects:
+        - cn: test
+          email: test@test.com
+    Timestamp:
+      type: object
+      properties:
+        required:
+          type: boolean
+          description: |
+            Specifies whether the signature field must be timestamped.
+          default: false
+        url:
+          type: string
+          description: |
+            The timestamp server URL.
+      description: |
+        Specifies time-stamping options associated with the signature field.
+    MdpOptions:
+      type: object
+      properties:
+        filter:
+          type: string
+          description: "Specifies the condition basis which fields should be considered\
+            \ for MDP.  \n`ALL` considers all form fields.  \n`INCLUDE` considers\
+            \ all form fields in the supplied list.  \n`EXCLUDE` considers all form\
+            \ fields except those in the supplied list.\n"
+          enum:
+          - ALL
+          - INCLUDE
+          - EXCLUDE
+        fields:
+          type: array
+          description: "Specifies a list of fully-qualified names of other form fields\
+            \ to be considered for MDP. Any form field, not necessarily a signature\
+            \ field, may be considered. Invalid names or those referring to non-existent\
+            \ fields are ignored.  \n\nThe list can be null only if the action is\
+            \ `ALL`.  \nIf action is `INCLUDE` or `EXCLUDE` and either the list is\
+            \ null or \nevaluates to null after removing the invalid entries, fields\
+            \ are not locked.\n"
+          items:
+            type: string
+      description: |
+        Specifies the options set in a signature field's lock dictionary, which contains a list of other fields that are locked once this field is signed. Any changes to the locked fields thereafter invalidates the signature.
+      example:
+        filter: EXCLUDE
+        fields:
+        - "data[0].form_name[0].Manager[0].team[0].signfield[0]"
+        - "data[0].form_name[0].Manager[0].team[0].signfield[1]"
+    UnlockOptions:
+      type: object
+      properties:
+        encryption:
+          type: string
+          enum:
+          - PASSWORD_BASED_ENCRYPT
+        unlockWith:
+          type: string
+          description: |
+            The Document Open password to unlock a password-encrypted PDF document.
+      description: |
+        Specifies how to unlock an encrypted PDF document.
+      example:
+        encryption: PASSWORD_BASED_ENCRYPT
+        unlockWith: openPassword
+    InlineB64Document:
+      type: string
+      description: |
+        An inline Base64-encoded document.
+      format: byte
+  responses:
+    DecryptSuccess:
+      description: |
+        Operation successful. The decrypted PDF document is included in the response.
+      content:
+        application/pdf:
+          schema:
+            $ref: '#/components/schemas/InlineDocument'
+    Accepted:
+      description: |
+        The request is accepted and the result can be checked at the location specified in the header.
+      headers:
+        Location:
+          $ref: '#/components/headers/Location'
+    BadRequest:
+      description: |
+        Bad request.
+        The request was invalid or cannot be served.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    InternalError:
+      description: |
+        Internal server error.
+        The server has encountered an error and is unable to process your request at this time.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    EncryptSuccess:
+      description: |
+        Operation successful. The encrypted PDF document is included in the response.
+      content:
+        application/pdf:
+          schema:
+            $ref: '#/components/schemas/InlineDocument'
+    SecuritySuccess:
+      description: |
+        Operation successful. The security type used in the supplied PDF document is included in the response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityInfo'
+    SignSuccess:
+      description: |
+        Operation successful.
+        The signed PDF document is included in the response.
+      content:
+        application/pdf:
+          schema:
+            $ref: '#/components/schemas/InlineDocument'
+    CertifySuccess:
+      description: |
+        Operation successful.
+        The certified PDF document is included in the response.
+      content:
+        application/pdf:
+          schema:
+            $ref: '#/components/schemas/InlineDocument'
+    AddSignFieldSuccess:
+      description: |
+        Operation successful.
+        The signature field has been added and the updated PDF document is included in the response.
+      content:
+        application/pdf:
+          schema:
+            $ref: '#/components/schemas/InlineDocument'
+  requestBodies:
+    DecryptRequest:
+      description: |
+        A multipart request representing a PDF document decryption operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: '#/components/schemas/DecryptRequest'
+      required: true
+    EncryptRequest:
+      description: |
+        A multipart request representing a PDF document encryption operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: '#/components/schemas/EncryptRequest'
+      required: true
+    SecurityRequest:
+      description: |
+        A multipart request representing a PDF security type retrieval operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: '#/components/schemas/SecurityRequest'
+      required: true
+    SignRequest:
+      description: |
+        A multipart request representing a sign operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: '#/components/schemas/SignRequest'
+      required: true
+    CertifyRequest:
+      description: |
+        A multipart request representing a certification operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: '#/components/schemas/CertifyRequest'
+      required: true
+    AddSignFieldRequest:
+      description: |
+        A multipart request representing a signature field addition operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: '#/components/schemas/AddSignFieldRequest'
+      required: true
+  headers:
+    Location:
+      description: |
+        Location of the response.
+      schema:
+        type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      description: |
+        In token-based authentication, an access token (Bearer authentication token)
+        is required to make requests to AEM as a Cloud Service.
+        AEM Forms as a Cloud Service provides APIs to securely retrieve the access token.
+        The end-to-end workflow for retrieving and using the token to authenticate a request is:
+
+        - [Retrieve AEM as a Cloud Service credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)
+        from the Developer Console.
+
+        - [Install AEM as a Cloud Service credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#install-the-service-credentials)
+        in your environment. Application Server, Web Server, or other non-AEM servers need to be configured to
+        send requests to the cloud service.
+
+        - [Generate a JWT token and exchange it](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#create-a-jwt-and-exchange-for-an-access-token)
+        with Adobe IMS APIs for an access token.
+
+        - Invoke the AEM API with the access token as a Bearer Authentication token.
+
+        - [Set appropriate permissions for the technical account user](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)
+        in the AEM environment.
+      scheme: bearer
+      bearerFormat: JWT

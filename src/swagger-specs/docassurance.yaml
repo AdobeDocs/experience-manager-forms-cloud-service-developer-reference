@@ -1,7 +1,9 @@
 openapi: 3.0.3
 info:
-  title: AEM FaaCS - DocAssurance sync HTTP APIs
+  title: AEM Forms as a Cloud Service - Document Assurance Synchronous APIs
   description: |
+    Document Assurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features). 
+    
     # Introduction
     The DocAssurance service provides the ability to perform various digital signature or encryption operations with PDF documents, such as signing, certification, addition of signature fields, encryption, decryption etc.
 
@@ -13,7 +15,8 @@ info:
     Create a user account for your developer or technical account member in the forms-user group.
     If you do not have a technical account, make a call to AEM as a Cloud Service.
     When you use a service credential, a technical account is created on the first call.
-  version: 0.0.1-experimental
+     <SecurityDefinitions />
+  version: 0.0.1
 externalDocs:
   description: Overview of AEM Document Services
   url: https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=en#

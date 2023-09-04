@@ -20,17 +20,21 @@ module.exports = {
       {
         title: 'API Reference',
         menu: [{
-          title: 'Document generation synchronous APIs',
+          title: 'Document Generation Synchronous APIs',
           description: 'Document generation synchronous APIs reference',
           path: '/api/output-sync.md'
         }, {
-          title: 'Document generation synchronous APIs',
+          title: 'Document Generation Batch APIs',
           description: 'Document generation batch APIs reference',
           path: '/api/output-batch.md'
         }, {
-          title: 'Document manipulation synchronous APIs',
+          title: 'Document Manipulation Synchronous APIs',
           description: 'Document manipulation synchronous APIs',
           path: '/api/assembler-sync.md'
+        }, {
+          title: 'Document Assurance Synchronous APIs',
+          description: 'Document Assurance synchronous APIs',
+          path: '/api/docassurance.md'
         }]
       },
       {

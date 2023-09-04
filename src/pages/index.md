@@ -81,7 +81,7 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 <DiscoverBlock slots="link, text"/>
 
-[Document Manipulation Synchronous APIs](references/docassurance.md) 
+[Document Assurance Synchronous APIs](references/docassurance.md) 
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 

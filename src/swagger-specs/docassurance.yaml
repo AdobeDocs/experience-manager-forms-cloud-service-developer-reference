@@ -13,7 +13,8 @@ info:
     Create a user account for your developer or technical account member in the forms-user group.
     If you do not have a technical account, make a call to AEM as a Cloud Service.
     When you use a service credential, a technical account is created on the first call.
-  version: 0.0.1-experimental
+     <SecurityDefinitions />
+  version: 0.0.1
 externalDocs:
   description: Overview of AEM Document Services
   url: https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=en#

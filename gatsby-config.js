@@ -32,8 +32,8 @@ module.exports = {
           description: 'Document manipulation synchronous APIs',
           path: '/api/assembler-sync.md'
         }, {
-          title: 'Document Assurance Synchronous APIs',
-          description: 'Document Assurance synchronous APIs',
+          title: 'DocAssurance Synchronous APIs',
+          description: 'DocAssurance synchronous APIs',
           path: '/api/docassurance.md'
         }]
       },

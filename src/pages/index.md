@@ -82,6 +82,6 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 [DocAssurance Synchronous APIs](references/docassurance.md)
 
-DocAssurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features).
+<span> You can send an email from your official email address to `aem-forms-early-adopter-program@adobe.com`  to join the early adopter program and request access to the capability. </span>
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.

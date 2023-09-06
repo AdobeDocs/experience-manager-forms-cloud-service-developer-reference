@@ -1,8 +1,9 @@
 openapi: 3.0.3
 info:
-  title: AEM Forms as a Cloud Service - Document Assurance Synchronous APIs
+  title: AEM Forms as a Cloud Service - DocAssurance Synchronous APIs
   description: |
-    Document Assurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features). 
+    <br> You can send an email to `aem-forms-early-adopter-program@adobe.com` from your official email ID to join the early adopter program and request access to the capability for your environment.  <br>  <br> 
+    DocAssurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features). 
     
     # Introduction
     The DocAssurance service provides the ability to perform various digital signature or encryption operations with PDF documents, such as signing, certification, addition of signature fields, encryption, decryption etc.
@@ -25,14 +26,14 @@ servers:
 security:
 - BearerAuth: []
 tags:
-- name: Document Assurance
+- name: DocAssurance
   description: |
     Digital signature and encryption-related operations with PDF documents.
 paths:
   /assure/encrypt:
     put:
       tags:
-      - Document Assurance
+      - DocAssurance
       summary: |
         Remove the Password based encryption from the supplied PDF document.
       requestBody:
@@ -69,7 +70,7 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       tags:
-      - Document Assurance
+      - DocAssurance
       summary: |
         Encrypt the supplied PDF document using Password based encryption.
       requestBody:
@@ -107,7 +108,7 @@ paths:
   /assure/inspect:
     post:
       tags:
-      - Document Assurance
+      - DocAssurance
       summary: |
         Fetch the type of security used in the supplied PDF document.
       requestBody:
@@ -145,7 +146,7 @@ paths:
   /assure/sign:
     post:
       tags:
-      - Document Assurance
+      - DocAssurance
       summary: |
         Sign the specified signature field in the supplied PDF document.
       requestBody:
@@ -184,7 +185,7 @@ paths:
   /assure/certify:
     post:
       tags:
-      - Document Assurance
+      - DocAssurance
       summary: |
         Certify the supplied PDF document.
       requestBody:
@@ -223,7 +224,7 @@ paths:
   /assure/signfield:
     post:
       tags:
-      - Document Assurance
+      - DocAssurance
       summary: |
         Add a signature field to the supplied PDF document.
       requestBody:

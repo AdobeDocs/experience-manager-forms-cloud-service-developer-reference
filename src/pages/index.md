@@ -80,8 +80,8 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 <DiscoverBlock slots="link, text"/>
 
-[Document Assurance Synchronous APIs](references/docassurance.md)
+[DocAssurance Synchronous APIs](references/docassurance.md)
 
-Document Assurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features).
+DocAssurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features).
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.

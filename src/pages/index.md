@@ -82,6 +82,6 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 [DocAssurance Synchronous APIs](references/docassurance.md)
 
-<span> You can send an email from your official email address to `aem-forms-early-adopter-program@adobe.com`  to join the early adopter program and request access to the capability. </span>
+<span> You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the capability. </span>
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.

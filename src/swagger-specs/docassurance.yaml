@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: AEM Forms as a Cloud Service - DocAssurance Synchronous APIs
   description: |
-    <br> You can send an email to `aem-forms-early-adopter-program@adobe.com` from your official email ID to join the early adopter program and enable the capability for your environment.  <br>  <br> 
+    <br> You can send an email to `aem-forms-early-adopter-program@adobe.com` from your official email ID to join the early adopter program and request access to the capability for your environment.  <br>  <br> 
     DocAssurance Synchronous APIs is a pre-release features and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features). 
     
     # Introduction

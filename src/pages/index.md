@@ -16,17 +16,19 @@ keywords:
 
 ### What are AEM Forms Communications APIs?
 
-Increasingly content and application owners are looking for easy-to-use PDF functionality when building modern web experiences. They are looking to cloud-based platforms with simple and reliable plug-and-play services. Communications capability helps you to create brand-approved, personalized, and standardized documents such as business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits.
+In the realm of modern development, content and application owners are increasingly seeking seamless PDF functionality. Their preference leans towards user-friendly RESTful services that are effortlessly integrated through straightforward and dependable plug-and-play APIs.
 
-AEM Forms Communications APIs has five main APIs: the Document Generation APIs, Document Manipulation APIs, and Document Assurance APIs. They help you deliver simpler, faster, and branded experiences so that you control user interaction with your documents, streamline communication workflows and promote usage and retention.
+Our Communications capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs. 
 
-These APIs offers a number of operations to programmatically manipulate documents and automate many different types of document workflows. You can easily combine XML data with PDF templates to produce personalized statements, set a password to prevent unauthorized opening of the document, combine multiple PDF documents to create one document, rearrange order of pages, and split a PDF into multiple documents to enable downstream solutions. There are also capabilities to convert XFA documents to PS, PCL, and ZPL formats, and encrypt, decrypt, sign, or certify PDF documents.
+Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents. 
 
-With tools and language support that caters to developers' existing skill sets, you can now create compelling and consistent communication experiences, based on PDF documents, including exporting, creating and working with PDFs.
+The AEM Forms Communications APIs encompass three key categories: [Document Generation APIs](#document-generation-communications-apis), [Document Manipulation APIs](#document-manipulation-communications-apis), and [Document Assurance APIs](#document-assurance-communications-apis). These powerful tools are designed to elevate your capabilities, delivering streamlined, faster, and branded experiences. By controlling user interaction with your documents, you can effectively streamline communication workflows, enhancing user engagement and retention.
 
-### Document Generation API for automating document workflows
+These APIs offer a comprehensive array of operations to programmatically manipulate documents, automating diverse document workflows. Among the functionalities provided are the ability to seamlessly combine XML data with PDF templates for personalized statements, apply password protection to restrict unauthorized access, merge multiple PDF documents into a single file, rearrange page order, and split a PDF into multiple documents to facilitate downstream solutions. Additionally, these APIs provide features to convert XFA documents to PS, PCL, and ZPL formats, as well as encrypt, decrypt, sign, or certify PDF documents
 
-The Document Generation APIs allows you to produce high fidelity PDF documents with dynamic data inputs. Using Document Generation API, you can merge your data(e.g. XML data) with XFA templates to create dynamic documents for contracts and agreements, invoices, proposals, reports, forms, branded marketing documents and more.
+### Document Generation API for automating document workflows {#document-generation-communications-apis}
+
+The Document Generation APIs allows you to produce high fidelity PDF documents with dynamic data inputs. Using Document Generation API, you can merge your data(for example, XML data) with XFA templates to create dynamic documents for contracts and agreements, invoices, proposals, reports, forms, branded marketing documents and more.
 
 These APIs are available in two flavors:
 
@@ -34,7 +36,9 @@ These APIs are available in two flavors:
 
 * **[Document Generation Asynchronous APIs (Batch APIs)](references/output-batch.md)** are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
 
-### Document Manipulation to automate for your document workflows
+The Document Generation APIs seamlessly [integrates with Microsoft Power Automate](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/) through user-friendly connectors, providing a hassle-free and efficient integration experience.
+
+### Document Manipulation to automate for your document workflows {#document-manipulation-communications-apis}
 
 The [Document Manipulation APIs](references/assembler-sync.md) help to combine, rearrange, and validate PDF documents. Typically, you create a DDX and submit it to document manipulation APIs to assemble or rearrange a document. The [DDX document](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) provides instructions on how to use the source documents to produce a set of required documents. The DDX reference documentation provides detailed information about all the supported operations.
 
@@ -51,14 +55,19 @@ Some examples of document manipulation are:
 * Divide a source document based on bookmarks
 * Convert to and validate PDF/A-compliant documents
 
-### Document Assurance to secure and protect your documents
+### Document Assurance to secure and protect your documents {#document-assurance-communications-apis}
 
-The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt and digitally sign your documents. When a document is encrypted, its contents become unreadable. You can encrypt the entire PDF document (including its content, metadata, and attachments), everything other than its metadata, or only the attachments. You can also certify a document before it is sent to a user to open by using Acrobat or Adobe Reader, validate a signature that was added to a form by using Acrobat or Adobe Reader, signs a document on behalf of a public notary.
+The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt, and digitally sign your documents. When a document is encrypted, its contents become unreadable. You can encrypt the entire PDF document (including its content, metadata, and attachments), everything other than its metadata, or only the attachments. You can also certify a document before it is sent to a user to open by using Acrobat or Adobe Reader, validate a signature that was added to a form by using Acrobat or Adobe Reader, sign a document on behalf of a public notary.
 
 >[!NOTE]
 >
 >
 > The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+
+
+### Community forum and feedback
+
+Customer feedback is particularly valuable as it helps the team validate use cases, guide development, and troubleshoot issues. Comments and questions are always welcome on the Community Forum.
 
 <!-- 
 

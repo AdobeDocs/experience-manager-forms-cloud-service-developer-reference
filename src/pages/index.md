@@ -12,8 +12,6 @@ keywords:
 
 ---
 
-<Hero slots="heading, text"/>
-
 # AEM Forms Cloud Service Communication APIs
 
 ## Introduction

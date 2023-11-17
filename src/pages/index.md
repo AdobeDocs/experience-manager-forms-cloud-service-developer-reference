@@ -1,4 +1,5 @@
 ---
+
 title: Adobe Experience Manager Forms Cloud Service APIs
 description: A collection of high-level references for all endpoints provided by Adobe Experience Manager Forms Cloud Service.
 keywords: 
@@ -8,6 +9,7 @@ keywords:
   - API Documentation
   - HTTP
   - REST
+
 ---
 
 <Hero slots="heading, text"/>
@@ -64,6 +66,8 @@ The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt 
 >
 >
 > The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+
+
 
 
 <!-- 

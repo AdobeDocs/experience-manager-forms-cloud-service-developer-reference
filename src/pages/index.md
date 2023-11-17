@@ -18,7 +18,7 @@ keywords:
 
 Increasingly content and application owners are looking for easy-to-use PDF functionality when building modern web experiences. They are looking to cloud-based platforms with simple and reliable plug-and-play services. Communications capability helps you to create brand-approved, personalized, and standardized documents such as business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits.
 
-AEM Forms Communications APIs has five main APIs: the Document Generation APIs, Document Manipulation APIs, and Document Assurance APIs. They help you deliver simpler, faster, and branded experiences so that you control user interaction with your documents, streamline communication workflows and promote usage and retention. 
+AEM Forms Communications APIs has five main APIs: the Document Generation APIs, Document Manipulation APIs, and Document Assurance APIs. They help you deliver simpler, faster, and branded experiences so that you control user interaction with your documents, streamline communication workflows and promote usage and retention.
 
 These APIs offers a number of operations to programmatically manipulate documents and automate many different types of document workflows. You can easily combine XML data with PDF templates to produce personalized statements, set a password to prevent unauthorized opening of the document, combine multiple PDF documents to create one document, rearrange order of pages, and split a PDF into multiple documents to enable downstream solutions. There are also capabilities to convert XFA documents to PS, PCL, and ZPL formats, and encrypt, decrypt, sign, or certify PDF documents.
 
@@ -34,14 +34,13 @@ These APIs are available in two flavors:
 
 * **[Document Generation Asynchronous APIs (Batch APIs)](references/output-batch.md)** are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
 
-
 ### Document Manipulation to automate for your document workflows
 
-The [Document Manipulation APIs](references/assembler-sync.md) help to combine, rearrange, and validate PDF documents. Typically, you create a DDX and submit it to document manipulation APIs to assemble or rearrange a document. The [DDX document](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) provides instructions on how to use the source documents to produce a set of required documents. The DDX reference documentation provides detailed information about all the supported operations. 
+The [Document Manipulation APIs](references/assembler-sync.md) help to combine, rearrange, and validate PDF documents. Typically, you create a DDX and submit it to document manipulation APIs to assemble or rearrange a document. The [DDX document](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) provides instructions on how to use the source documents to produce a set of required documents. The DDX reference documentation provides detailed information about all the supported operations.
 
 You can use the document manipulation APIs to convert a PDF document to a PDF/A-compliant document and to determine whether a PDF document is PDF/A-compliant. PDF/A is an archival format meant for long-term preservation of the document's content.
 
-Some examples of document manipulation are: 
+Some examples of document manipulation are:
 
 * Assemble a simple PDF document
 * Create a PDF Portfolio
@@ -56,11 +55,10 @@ Some examples of document manipulation are:
 
 The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt and digitally sign your documents. When a document is encrypted, its contents become unreadable. You can encrypt the entire PDF document (including its content, metadata, and attachments), everything other than its metadata, or only the attachments. You can also certify a document before it is sent to a user to open by using Acrobat or Adobe Reader, validate a signature that was added to a form by using Acrobat or Adobe Reader, signs a document on behalf of a public notary.
 
->[!NOTE] 
+>[!NOTE]
 >
 >
 > The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
-
 
 <!-- 
 

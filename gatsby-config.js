@@ -18,22 +18,18 @@ module.exports = {
         path: '/'
       },
       {
-        title: 'API Reference',
+        title: 'API',
         menu: [{
-          title: 'Document Generation Synchronous APIs',
-          description: 'Document generation synchronous APIs reference',
+          title: 'Document Generation - Synchronous APIs',
           path: '/api/output-sync.md'
         }, {
-          title: 'Document Generation Batch APIs',
-          description: 'Document generation batch APIs reference',
+          title: 'Document Generation - Batch APIs',
           path: '/api/output-batch.md'
         }, {
-          title: 'Document Manipulation Synchronous APIs',
-          description: 'Document manipulation synchronous APIs',
+          title: 'Document Manipulation - Synchronous APIs',
           path: '/api/assembler-sync.md'
         }, {
-          title: 'DocAssurance Synchronous APIs',
-          description: 'DocAssurance synchronous APIs',
+          title: 'DocAssurances - Synchronous APIs',
           path: '/api/docassurance.md'
         }]
       },

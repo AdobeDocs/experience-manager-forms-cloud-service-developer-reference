@@ -42,7 +42,7 @@ The [Document Manipulation APIs](references/assembler-sync.md) help to combine, 
 
 You can use the document manipulation APIs to convert a PDF document to a PDF/A-compliant document and to determine whether a PDF document is PDF/A-compliant. PDF/A is an archival format meant for long-term preservation of the document's content.
 
-Some examples of document manipulation are:  
+Some examples of document manipulation are:
 
 * Assemble a simple PDF document
 * Create a PDF Portfolio

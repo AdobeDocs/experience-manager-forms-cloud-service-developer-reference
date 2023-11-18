@@ -107,6 +107,8 @@ Follow this tutorial to gather the required authentication credentials the Priva
     
 Follow this tutorial to gather the required authentication credentials for the Reactor API. -->
 
+## Discover
+
 <DiscoverBlock slots="heading, link, text"/>
 
 ### API References

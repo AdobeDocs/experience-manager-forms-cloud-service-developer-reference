@@ -30,9 +30,9 @@ The Document Generation APIs allows you to produce high fidelity PDF documents w
 
 These APIs are available in two flavors:
 
-* **[Document Generation Synchronous APIs](references/output-sync.md)** are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
+* [Synchronous APIs](references/output-sync.md) are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
 
-* **[Document Generation Asynchronous APIs (Batch APIs)](references/output-batch.md)** are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
+* [Asynchronous APIs (Batch APIs)](references/output-batch.md) are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
 
 The Document Generation APIs seamlessly [integrates with Microsoft Power Automate](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/) through user-friendly connectors, providing a hassle-free and efficient integration experience.
 
@@ -57,7 +57,7 @@ Some examples of document manipulation are:
 
 The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt, and digitally sign your documents. When a document is encrypted, its contents become unreadable. You can encrypt the entire PDF document (including its content, metadata, and attachments), everything other than its metadata, or only the attachments. You can also certify a document before it is sent to a user to open by using Acrobat or Adobe Reader, validate a signature that was added to a form by using Acrobat or Adobe Reader, sign a document on behalf of a public notary.
 
-> **_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
 
 ### Community forum and feedback
 
@@ -133,4 +133,6 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 [DocAssurance Synchronous APIs](references/docassurance.md)
 
-Use these APIs to encrypt, decrypt, sign, or certify PDF documents. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the capability.
+Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
+
+**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.

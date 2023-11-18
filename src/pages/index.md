@@ -105,9 +105,9 @@ Follow this tutorial to gather the required authentication credentials the Priva
 
 [Authenticate and access the Reactor API](https://experienceleague.adobe.com/docs/experience-platform/tags/api/getting-started.html)
     
-Follow this tutorial to gather the required authentication credentials for the Reactor API.
+Follow this tutorial to gather the required authentication credentials for the Reactor API. -->
 
-<DiscoverBlock slots="heading, link, text"/> 
+<DiscoverBlock slots="heading, link, text"/>
 
 ### API References
 
@@ -132,4 +132,3 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 [DocAssurance Synchronous APIs](references/docassurance.md)
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the capability.
--->

@@ -133,7 +133,6 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 [DocAssurance Synchronous APIs](references/docassurance.md)
 
-Use these APIs to encrypt, decrypt, sign, or certify PDF documents. 
+Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 
 **_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
-

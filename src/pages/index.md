@@ -106,7 +106,6 @@ Follow this tutorial to gather the required authentication credentials the Priva
 [Authenticate and access the Reactor API](https://experienceleague.adobe.com/docs/experience-platform/tags/api/getting-started.html)
     
 Follow this tutorial to gather the required authentication credentials for the Reactor API. -->
-
 <DiscoverBlock slots="heading, link, text"/> 
 
 ### API References

@@ -18,6 +18,8 @@ keywords:
 
 AEM Forms Communications APIs capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs.
 
+![Communications templates](/src/pages/assets/templates.jpeg "Communications templates")
+
 Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents.
 
 The AEM Forms Communications APIs encompass three key categories: [Document Generation APIs](#document-generation-api-for-automating-document-workflows-document-generation-communications-apis), [Document Manipulation APIs](#document-manipulation-to-automate-for-your-document-workflows-document-manipulation-communications-apis), and [Document Assurance APIs](#document-assurance-to-secure-and-protect-your-documents-document-assurance-communications-apis). These powerful tools are designed to elevate your capabilities, delivering streamlined, faster, and branded experiences. By controlling user interaction with your documents, you can effectively streamline communication workflows, enhancing user engagement and retention.

@@ -18,7 +18,7 @@ keywords:
 
 AEM Forms Communications APIs capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs.
 
-![Communications templates](/src/pages/assets/templates.jpeg "Communications templates")
+![Communications templates](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/pages/assets/templates.jpeg?raw=true "Communications templates")
 
 Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents.
 

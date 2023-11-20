@@ -24,17 +24,15 @@ Empowered by tools and programming language support tailored to developers' exis
 
 The AEM Forms Communications APIs encompass three key categories: [Document Generation APIs](#document-generation-api-for-automating-document-workflows-document-generation-communications-apis), [Document Manipulation APIs](#document-manipulation-to-automate-for-your-document-workflows-document-manipulation-communications-apis), and [Document Assurance APIs](#document-assurance-to-secure-and-protect-your-documents-document-assurance-communications-apis). These powerful tools are designed to elevate your capabilities, delivering streamlined, faster, and branded experiences. By controlling user interaction with your documents, you can effectively streamline communication workflows, enhancing user engagement and retention.
 
-These APIs offer a comprehensive array of operations to programmatically manipulate documents, automating diverse document workflows. Among the functionalities provided are the ability to seamlessly combine XML data with PDF templates for personalized statements, apply password protection to restrict unauthorized access, merge multiple PDF documents into a single file, rearrange page order, and split a PDF into multiple documents to facilitate downstream solutions. Additionally, these APIs provide features to convert XFA documents to PS, PCL, and ZPL formats, as well as encrypt, decrypt, sign, or certify PDF documents
-
-### Document Generation API for automating document workflows {#document-generation-communications-apis}
-
-The Document Generation APIs allows you to produce high fidelity PDF documents with dynamic data inputs. Using Document Generation API, you can merge your data(for example, XML data) with XFA templates to create dynamic documents for contracts and agreements, invoices, proposals, reports, forms, branded marketing documents and more.
-
 These APIs are available in two flavors:
 
 * [Synchronous APIs](references/output-sync.md) are suitable for on-demand, low latency, and single record document generation use cases. These APIs are more suitable for user-action based use cases. For example, generating a document after a user fill a form.
 
 * [Asynchronous APIs (Batch APIs)](references/output-batch.md) are suitable for scheduled, high throughput, and multiple document generation use cases. These APIs generate documents in batches. For example, phone bills, credit card statements, and benefits statements generated every month.
+
+### Document Generation API for automating document workflows {#document-generation-communications-apis}
+
+The Document Generation APIs allows you to produce high fidelity PDF documents with dynamic data inputs. Using Document Generation API, you can merge your data(for example, XML data) with XFA templates to create dynamic documents for contracts and agreements, invoices, proposals, reports, forms, branded marketing documents and more. Additionally, these APIs provide features to convert XFA documents to PS, PCL, and ZPL formats,
 
 The Document Generation APIs seamlessly [integrates with Microsoft Power Automate](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/) through user-friendly connectors, providing a hassle-free and efficient integration experience.
 

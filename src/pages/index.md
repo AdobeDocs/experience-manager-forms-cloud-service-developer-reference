@@ -136,3 +136,13 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 
 **_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+
+
+## FAQ (Frequently asked Questions)
+
+**Q: Are these communication API's available for AEM Forms Cloud Service?**
+A: Yes, these APIs are available for AEM Forms as a Cloud Service. However, it's important to note that an AEM Forms as Cloud Service Renditions license is required to use these APIs.
+
+**Q: Do these APIs require additional licensing? We currently possess an AEM Forms Submissions license. Is an AEM Forms Renditions license required to access these APIs?**
+
+A: You require an AEM Forms as Cloud Service Renditions license to use these APIs.

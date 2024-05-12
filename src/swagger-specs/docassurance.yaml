@@ -3,7 +3,7 @@ info:
   title: AEM Forms as a Cloud Service - DocAssurance Synchronous APIs
   description: |
 
-    <span> You can write to `mailto:aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the capability. </span>
+    <span> You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the capability. </span>
 
     # Introduction
     The DocAssurance service provides the ability to perform various digital signature or encryption operations with PDF documents, such as signing, certification, addition of signature fields, encryption, decryption etc.

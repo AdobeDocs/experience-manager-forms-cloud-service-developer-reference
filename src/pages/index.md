@@ -57,7 +57,7 @@ Some examples of document manipulation are:
 
 The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt, and digitally sign your documents. When a document is encrypted, its contents become unreadable. You can encrypt the entire PDF document (including its content, metadata, and attachments), everything other than its metadata, or only the attachments. You can also certify a document before it is sent to a user to open by using Acrobat or Adobe Reader, validate a signature that was added to a form by using Acrobat or Adobe Reader, sign a document on behalf of a public notary.
 
-**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
 
 ### Community forum and feedback
 
@@ -135,4 +135,4 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 
-**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `mailto:aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-early-adopter-program@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.

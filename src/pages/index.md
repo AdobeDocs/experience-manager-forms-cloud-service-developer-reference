@@ -59,6 +59,7 @@ The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt,
 
 **NOTE:**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
 
+
 ### Community forum and feedback
 
 Customer feedback is particularly valuable as it helps the team validate use cases, guide development, and troubleshoot issues. Comments and questions are always welcome on the [Community Forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-forms/ct-p/adobe-experience-manager-forms-community).

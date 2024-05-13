@@ -50,8 +50,8 @@ Some examples of document manipulation are:
 * Assemble documents using Bates numbering
 * Flatten and assemble document
 * Extract pages from a source document
-* Divide a source document based on bookmarks
 * Convert to and validate PDF/A-compliant documents
+* Divide a source document based on bookmarks
 
 ### Document Assurance to secure and protect your documents {#document-assurance-communications-apis}
 

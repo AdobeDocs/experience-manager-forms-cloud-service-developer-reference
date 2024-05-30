@@ -7,7 +7,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
       - name: Checkout
         uses: actions/checkout@v3
       - name: Yarn Install
@@ -15,11 +14,6 @@ jobs:
       - name: Build
         run: |
           yarn build
-      - name: Check Yarn Logs
-        run: |
-          yarn log
-
-      
         env:
           PREFIX_PATHS: true # works like --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ github.event.repository.name }}

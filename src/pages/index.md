@@ -67,7 +67,7 @@ Forms service generates interactive PDF forms for data capture. It can also be u
 
 >[!NOTE]
 >
-> The **Document Assurance APIs** and **Forms Service APIs** are under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+> The **Document Assurance APIs** and **Forms Service APIs** are under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email address to join the early adopter program and request access to the Document Assurance capability.
 
 ### Community forum and feedback
 

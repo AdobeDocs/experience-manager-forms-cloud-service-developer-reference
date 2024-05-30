@@ -65,9 +65,7 @@ Forms service generates interactive PDF forms for data capture. It can also be u
 * **Data Extraction and Import**: Import data into an existing PDF form as well as extract data from a filled PDF form. Both XDP and XML data formats are supported, and importing to non-XFA PDF forms (also known as AcroForms) additionally supports FDF and XFDF data.
 * **Data Validation**: Validate submitted data, in XDP or XML format, against a template created using AEM Forms Designer.
 
->[!NOTE]
->
-> The **Document Assurance APIs** and **Forms Service APIs** are under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email address to join the early adopter program and request access to the Document Assurance capability.
+**NOTE:** The **Document Assurance APIs** and **Forms Service APIs** are under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email address to join the early adopter program and request access to the Document Assurance capability.
 
 ### Community forum and feedback
 

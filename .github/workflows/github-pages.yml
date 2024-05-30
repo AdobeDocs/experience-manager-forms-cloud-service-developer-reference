@@ -15,6 +15,9 @@ jobs:
       - name: Build
         run: |
           yarn build
+      - name: Check Yarn Logs
+        run: |
+          yarn log
 
       
         env:

@@ -57,7 +57,17 @@ Some examples of document manipulation are:
 
 The [Document Assurance APIs](references/docassurance.md) help encrypt, decrypt, and digitally sign your documents. When a document is encrypted, its contents become unreadable. You can encrypt the entire PDF document (including its content, metadata, and attachments), everything other than its metadata, or only the attachments. You can also certify a document before it is sent to a user to open by using Acrobat or Adobe Reader, validate a signature that was added to a form by using Acrobat or Adobe Reader, sign a document on behalf of a public notary.
 
-**NOTE:**  The Document Assurance APIs is under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+### Forms Service APIs
+
+Forms service generates interactive PDF forms for data capture. It can also be used to importor  export data to and from an existing interactive PDF form and validate submitted data. Here's a breakdown of its functionalities: 
+
+* **Rendering Forms**: Generate an interactive PDF form from a template created using AEM Forms Designer and, optionally, XML data. This essentially produces a fillable PDF form optionally pre-filled with data.
+* **Data Extraction and Import**: Import data into an existing PDF form as well as extract data from a filled PDF form. Both XDP and XML data formats are supported, and importing to non-XFA PDF forms (also known as AcroForms) additionally supports FDF and XFDF data.
+* **Data Validation**: : Validate submitted data, in XDP or XML format, against a template created using AEM Forms Designer.
+
+>[!NOTE]
+>
+> The **Document Assurance APIs** and **Forms Service APIs** are under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
 
 ### Community forum and feedback
 

@@ -67,6 +67,24 @@ Forms service generates interactive PDF forms for data capture. It can also be u
 
 **NOTE:** The **Document Assurance APIs** and **Forms Service APIs** are under early adopter program. You can write to `aem-forms-ea@adobe.com` from your official email address to join the early adopter program and request access to the Document Assurance capability.
 
+## Edge Delivery Services for Forms (Forms Submission Service)
+
+Edge Delivery Services for AEM Forms is a composable set of services that enables a rapid development environment where authors can update, publish, and launch new forms rapidly. These services deliver exceptional and high impact forms experiences that drive engagement and conversions. These forms experiences are easy to author and develop. 
+
+### Forms Submission Service API 
+
+The Forms Submission Service API is designed to handle the submission of form data. When a user fills out a form, the API ensures that all the entered information is collected and sent to the correct destination for processing.
+
+#### How It Works:
+
+1. Data Collection: All the information entered by the user is gathered into a field called data.
+1. Form Identification: Each form has a unique identifier, which is a Base64-encoded path. This identifier helps the system recognize which specific form has been submitted.
+1. Submission: The API takes the data and the form's unique identifier to process and store the submitted information appropriately.
+
+In simple terms, the API acts as a messenger that takes the user's filled-in form data and delivers it to the right place, ensuring that the system knows exactly which form was submitted.
+
+
+
 ### Community forum and feedback
 
 Customer feedback is particularly valuable as it helps the team validate use cases, guide development, and troubleshoot issues. Comments and questions are always welcome on the [Community Forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-forms/ct-p/adobe-experience-manager-forms-community).

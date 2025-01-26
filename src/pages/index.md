@@ -10,9 +10,9 @@ keywords:
   - REST
 ---
 
-# AEM Forms Cloud Service Communication APIs
+# AEM Forms Cloud Service 
 
-## Introduction
+## AEM Forms Communications APIs
 
 ### What are AEM Forms Communications APIs?
 

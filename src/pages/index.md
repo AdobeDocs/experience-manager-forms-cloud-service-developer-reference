@@ -83,6 +83,7 @@ The Forms Submission Service API is designed to handle the submission of form da
 
 In simple terms, the API acts as a messenger that takes the user's filled-in form data and delivers it to the right place, ensuring that the system knows exactly which form was submitted.
 
+
 ### Community forum and feedback
 
 Customer feedback is particularly valuable as it helps the team validate use cases, guide development, and troubleshoot issues. Comments and questions are always welcome on the [Community Forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-forms/ct-p/adobe-experience-manager-forms-community).

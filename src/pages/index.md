@@ -161,9 +161,8 @@ Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 
 **_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `mailto:aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
 
-
 <DiscoverBlock slots="link, text"/>
 
 [Edge Delivery Services - Forms Submission Service](references/docassurance.md)
 
-Use this APIs to  handle the submission of form data. When a user fills out a form, the API ensures that all the entered information is collected and sent to the correct destination for processing. 
+Use this APIs to  handle the submission of form data. When a user fills out a form, the API ensures that all the entered information is collected and sent to the correct destination for processing.

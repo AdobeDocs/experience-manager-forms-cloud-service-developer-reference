@@ -163,6 +163,6 @@ Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 
 <DiscoverBlock slots="link, text"/>
 
-[Edge Delivery Services - Forms Submission Service](references/docassurance.md)
+[Edge Delivery Services - Forms Submission Service](references/aem-forms-submission-service.md)
 
 Use this APIs to  handle the submission of form data. When a user fills out a form, the API ensures that all the entered information is collected and sent to the correct destination for processing.

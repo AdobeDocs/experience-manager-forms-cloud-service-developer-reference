@@ -8,11 +8,8 @@ info:
     - The feature must be explicitly requested and enabled via the appropriate request form.
     - An AEM Forms Add-on license is mandatory to use this service.
     
-    For detailed setup instructions, refer to the [documentation](https://main--afb--adobe.hlx.live/docs/docbased/submit#linking-the-spreadsheet-in-form-definition).
+    For detailed setup instructions, refer to the [documentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/forms-submission-service).
   version: 1.0.0
-externalDocs:
-  description: Getting started guide
-  url: https://main--afb--adobe.hlx.live/docs/docbased/submit
 servers:
   - url: https://forms.adobe.com/adobe/forms/af/submit
     description: Production Server
@@ -23,12 +20,12 @@ paths:
       description: |
         Submits form data encapsulated in the `data` field for a form identified by its Base64-encoded path.
         **Prerequisites**:
-        - Feature enablement request form must be completed and approved.
-        - An AEM Forms Add-on license is mandatory.
+        - Send an email from your official address to mailto:aem-forms-ea@adobe.com to request access.
+        - A valid AEM Forms license. For more details about licensing, consult your Adobe account representative. 
         - Ensure the `forms@adobe.com` account has edit access to the designated spreadsheet.
-        - Proper setup of the target spreadsheet with field definitions and sharing permissions.
+        - [Setup the target spreadsheet with field definitions and sharing permissions](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms).
         
-        For detailed setup instructions, refer to the [documentation](https://main--afb--adobe.hlx.live/docs/docbased/submit#linking-the-spreadsheet-in-form-definition).
+        For detailed setup instructions, refer to the [documentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/forms-submission-service#share-the-spreadsheet-and-generate-a-link).
       parameters:
         - in: path
           name: id

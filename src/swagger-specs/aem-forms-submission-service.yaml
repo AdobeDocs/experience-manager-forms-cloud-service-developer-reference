@@ -1,0 +1,101 @@
+openapi: 3.0.1
+info:
+  title: AEM Forms Submission Service API
+  description: |
+    API to submit form data encapsulated within a `data` object. 
+    The `data` field can contain any JSON payload, allowing for flexible form submissions.
+    **Important Notes**:
+    - The feature must be explicitly requested and enabled via the appropriate request form.
+    - An AEM Forms Add-on license is mandatory to use this service.
+    
+    For detailed setup instructions, refer to the [documentation](https://main--afb--adobe.hlx.live/docs/docbased/submit#linking-the-spreadsheet-in-form-definition).
+  version: 1.0.0
+externalDocs:
+  description: Getting started guide
+  url: https://main--afb--adobe.hlx.live/docs/docbased/submit
+servers:
+  - url: https://forms.adobe.com/adobe/forms/af/submit
+    description: Production Server
+paths:
+  /{id}:
+    post:
+      summary: Submit Form
+      description: |
+        Submits form data encapsulated in the `data` field for a form identified by its Base64-encoded path.
+        **Prerequisites**:
+        - Feature enablement request form must be completed and approved.
+        - An AEM Forms Add-on license is mandatory.
+        - Ensure the `forms@adobe.com` account has edit access to the designated spreadsheet.
+        - Proper setup of the target spreadsheet with field definitions and sharing permissions.
+        
+        For detailed setup instructions, refer to the [documentation](https://main--afb--adobe.hlx.live/docs/docbased/submit#linking-the-spreadsheet-in-form-definition).
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          example: L2Zvcm1zL21vZGFs
+          description: Base64-encoded form path identifying the specific form.
+        - in: header
+          name: x-adobe-routing
+          schema:
+            type: string
+          required: true
+          example: tier=live,bucket=main--afb--adobe
+          description: Routing information for the request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  additionalProperties: true
+                  description: A JSON object containing the form data. This can include any structure or fields.
+              required:
+                - data
+              example:
+                data:
+                  first_name: John
+                  last_name: Doe
+                  email: john.doe@example.com
+                  phone: 1234567890
+                  address:
+                    street: "123 Main St"
+                    city: "Sampleville"
+                    zip: "54321"
+      responses:
+        '202':
+          description: Request accepted for processing
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: Bad request - invalid input or missing spreadsheet link
+          headers:
+            x-error:
+              schema:
+                type: string
+              description: Details about the error.
+        '403':
+          description: |
+            Access denied - `forms@adobe.com` does not have edit permissions on the spreadsheet or the required license is not available.
+          headers:
+            x-error:
+              schema:
+                type: string
+              description: Details about the error.
+        '500':
+          description: Internal server error - unable to persist data to the spreadsheet.
+          headers:
+            x-error:
+              schema:
+                type: string
+              description: Details about the error.

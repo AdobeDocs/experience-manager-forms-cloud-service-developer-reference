@@ -12,13 +12,13 @@ keywords:
 
 # AEM Forms Cloud Service 
 
-## AEM Forms Communications APIs
+Adobe Experience Manager Forms as a Cloud Service is a cloud-native solution for businesses to create, manage, publish, and update complex digital forms and communications while integrating submitted data with back-end processes, business rules, and saving data in an external data store.
 
-### What are AEM Forms Communications APIs?
+## AEM Forms Communications APIs 
 
-AEM Forms Communications APIs capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs.
+AEM Forms Communications APIs capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs. 
 
-Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents.
+Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents. 
 
 ![Communications templates](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/pages/assets/templates.jpeg?raw=true "Communications templates")
 
@@ -82,8 +82,6 @@ The Forms Submission Service API is designed to handle the submission of form da
 1. Submission: The API takes the data and the form's unique identifier to process and store the submitted information appropriately.
 
 In simple terms, the API acts as a messenger that takes the user's filled-in form data and delivers it to the right place, ensuring that the system knows exactly which form was submitted.
-
-
 
 ### Community forum and feedback
 

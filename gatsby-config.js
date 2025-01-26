@@ -31,6 +31,9 @@ module.exports = {
         }, {
           title: 'DocAssurances - Synchronous APIs',
           path: '/api/docassurance.md'
+        }, {
+          title: 'Edge Deliver Services: Forms Submission Service',
+          path: '/api/aem-forms-submission-service.md'
         }]
       },
       {

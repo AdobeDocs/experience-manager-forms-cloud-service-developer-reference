@@ -10,15 +10,15 @@ keywords:
   - REST
 ---
 
-# AEM Forms Cloud Service 
+# AEM Forms Cloud Service
 
 Adobe Experience Manager Forms as a Cloud Service is a cloud-native solution for businesses to create, manage, publish, and update complex digital forms and communications while integrating submitted data with back-end processes, business rules, and saving data in an external data store.
 
-## AEM Forms Communications APIs 
+## AEM Forms Communications APIs
 
-AEM Forms Communications APIs capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs. 
+AEM Forms Communications APIs capability offers a suite of APIs designed to empower you in crafting brand-consistent, personalized, and standardized documents. Whether it's business correspondences, statements, claim processing letters, benefit notices, monthly bills, or welcome kits, these APIs streamline the creation process. Additionally, our APIs ensure the security and protection of your documents. With the AEM Forms Communications API, you have the flexibility to seamlessly combine, rearrange, and validate PDF documents to meet your specific needs.
 
-Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents. 
+Empowered by tools and programming language support tailored to developers' existing skill sets, you can now effortlessly craft engaging and uniform communication experiences centered around PDF documents.
 
 ![Communications templates](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/pages/assets/templates.jpeg?raw=true "Communications templates")
 
@@ -69,9 +69,9 @@ Forms service generates interactive PDF forms for data capture. It can also be u
 
 ## Edge Delivery Services for Forms (Forms Submission Service)
 
-Edge Delivery Services for AEM Forms is a composable set of services that enables a rapid development environment where authors can update, publish, and launch new forms rapidly. These services deliver exceptional and high impact forms experiences that drive engagement and conversions. These forms experiences are easy to author and develop. 
+Edge Delivery Services for AEM Forms is a composable set of services that enables a rapid development environment where authors can update, publish, and launch new forms rapidly. These services deliver exceptional and high impact forms experiences that drive engagement and conversions. These forms experiences are easy to author and develop.
 
-### Forms Submission Service API 
+### Forms Submission Service API
 
 The Forms Submission Service API is designed to handle the submission of form data. When a user fills out a form, the API ensures that all the entered information is collected and sent to the correct destination for processing.
 
@@ -82,7 +82,6 @@ The Forms Submission Service API is designed to handle the submission of form da
 1. Submission: The API takes the data and the form's unique identifier to process and store the submitted information appropriately.
 
 In simple terms, the API acts as a messenger that takes the user's filled-in form data and delivers it to the right place, ensuring that the system knows exactly which form was submitted.
-
 
 ### Community forum and feedback
 

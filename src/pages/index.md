@@ -22,7 +22,7 @@ Empowered by tools and programming language support tailored to developers' exis
 
 ![Communications templates](https://github.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/blob/main/src/pages/assets/templates.jpeg?raw=true "Communications templates")
 
-The AEM Forms Communications APIs encompass three key categories: [Document Generation APIs](#document-generation-api-for-automating-document-workflows-document-generation-communications-apis), [Document Manipulation APIs](#document-manipulation-to-automate-for-your-document-workflows-document-manipulation-communications-apis), and [Document Assurance APIs](#document-assurance-to-secure-and-protect-your-documents-document-assurance-communications-apis). These powerful tools are designed to elevate your capabilities, delivering streamlined, faster, and branded experiences. By controlling user interaction with your documents, you can effectively streamline communication workflows, enhancing user engagement and retention.
+The AEM Forms Communications APIs encompass three key categories: [Document Generation APIs](#document-generation-api-for-automating-document-workflows), [Document Manipulation APIs](#document-manipulation-to-automate-for-your-document-workflows), and [Document Assurance APIs](#document-assurance-to-secure-and-protect-your-documents). These powerful tools are designed to elevate your capabilities, delivering streamlined, faster, and branded experiences. By controlling user interaction with your documents, you can effectively streamline communication workflows, enhancing user engagement and retention.
 
 These APIs are available in two flavors:
 

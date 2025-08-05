@@ -257,6 +257,43 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /adobe/forms/doc/v1/generate/afp:
+    post:
+      tags:
+        - Communications Services
+      summary: |
+        Generates an AFP document from a template, optionally with data merging.
+      parameters:
+        - $ref: '#/components/parameters/AcceptHeader'
+      requestBody:
+        $ref: "#/components/requestBodies/AfpRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/AfpSuccess"
+        "400":
+          description: Bad Request. The request was invalid or cannot be served.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Unauthorized. Authentication credentials are missing or incorrect.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "408":
+          description: Request timed out. An operation has timed out on the client.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error. The server has encountered an error and is unable to process your request at this time.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   description: Generates a PDF or a PDF/A document from the provided form design and data. Optionally, generate a metadata file for each record and send the output directly to a printer. Use this operation to use a form design that is part of an application in the Applications view. It is recommended that you use the generatePDFOutput operation (deprecated) operation when the form design is located on a network, local file system, or HTTP location.
   schemas:
@@ -432,6 +469,76 @@ components:
       - properties:
           options:
             $ref: '#/components/schemas/PDFOutputOptions'
+    AfpRequest:
+      required:
+        - template
+      properties:
+        template:
+          description: |
+            The template defines appearance and behavior of the resultant AFP document.
+            
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+        data:
+          description: |
+            An XML file containing the data to be merged with template.
+            
+            Use content-type as "text/plain" to specify a URL or a repository path.
+          oneOf:
+            - type: string
+              format: binary
+            - type: string
+        options:
+          $ref: "#/components/schemas/AfpOptions"
+      example:
+        template: "https://www.example.com/assets/sampletemplate.pdf"
+        data: "sampledata.xml"
+        options:
+          $ref: "#/components/schemas/AfpOptions/example"
+    CommonRenderOptions:
+      type: object
+      description: |
+        Options to govern AFP document generation.
+      properties:
+        contentRoot:
+          type: string
+          description: |
+            Location of template resources (images, fragments, etc.).
+        embedFonts:
+          type: boolean
+          description: |
+            Specify whether to embed fonts in the generated document.
+          default: false
+        locale:
+          type: string
+          description: Specify locale/language for the output document.
+          default: "en"
+    AfpOptions:
+      allOf:
+        - $ref: "#/components/schemas/CommonRenderOptions"
+        - type: object
+          description: |
+            Options to govern AFP document generation.
+          properties:
+            pdfVersion:
+              type: string
+              description: |
+                The version of the PDF embedded as an object container in the AFP document.
+              default: "1.7-ADBE-3"
+            resolution:
+              type: integer
+              description: |
+                Resolution in dots per inch for the generated AFP document.
+              default: 300
+      example:
+        contentRoot: "crx:///content/dam/formsanddocuments/"
+        locale: "en"
+        pdfVersion: "1.7-ADBE-3"
+        embedFonts: false
+        resolution: 300
   parameters:
     AcceptHeader:
       name: Accept
@@ -443,7 +550,30 @@ components:
       schema:
         type: string
       example: "multipart/mixed"
+  requestBodies:
+    AfpRequest:
+      description: |
+        A multipart request representing an AFP document generation operation.
+      content:
+        multipart/form-data:
+          schema:
+            $ref: "#/components/schemas/AfpRequest"
+          encoding:
+            template:
+              contentType: text/plain, application/pdf, application/vnd.adobe.xdp+xml
+            data:
+              contentType: text/plain, application/xml
+            options:
+              contentType: application/json
   responses:
+    AfpSuccess:
+      description: |
+        Operation successful.
+        The generated AFP document is included in the response.
+      content:
+        application/x-afp:
+          schema:
+            $ref: "#/components/schemas/Result"
     LinkResponse:
       description: The generated PDF Document is sent to the specified URL.
       content:

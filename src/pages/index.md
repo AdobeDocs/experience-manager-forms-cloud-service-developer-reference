@@ -141,7 +141,7 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 [Document Generation Synchronous API](references/output-sync.md)
 
-Use these APIs to generate a communication on demand for print and digital deliveries. 
+Use these APIs to generate a communication on demand for print and digital deliveries.  
 
 <DiscoverBlock slots="link, text"/>
 

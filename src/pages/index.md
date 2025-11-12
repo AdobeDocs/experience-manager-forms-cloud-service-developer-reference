@@ -141,7 +141,7 @@ Follow this tutorial to gather the required authentication credentials for the R
 
 [Document Generation Synchronous API](references/output-sync.md)
 
-Use these APIs to generate a communication on demand for print and digital deliveries.
+Use these APIs to generate a communication on demand for print and digital deliveries.  
 
 <DiscoverBlock slots="link, text"/>
 
@@ -157,7 +157,13 @@ Use these APIs to combine, rearrange, augment PDF and XDP documents and obtain i
 
 <DiscoverBlock slots="link, text"/>
 
-[DocAssurance Synchronous APIs](references/docassurance.md)
+[DocAssurance Synchronous APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#tag/Document-Assurance)
+
+Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
+
+**_NOTE:_**  The Document Assurance APIs is under early adopter program. You can write to `mailto:aem-forms-ea@adobe.com` from your official email id to join the early adopter program and request access to the Document Assurance capability.
+
+[DocAssurance Synchronous APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#tag/Document-Assurance)
 
 Use these APIs to encrypt, decrypt, sign, or certify PDF documents.
 

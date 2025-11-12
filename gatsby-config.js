@@ -29,9 +29,6 @@ module.exports = {
           title: 'Document Manipulation - Synchronous APIs',
           path: '/api/assembler-sync.md'
         }, {
-          title: 'DocAssurances - Synchronous APIs',
-          path: '/api/docassurance.md'
-        }, {
           title: 'Edge Deliver Services: Forms Submission Service',
           path: '/api/aem-forms-submission-service.md'
         }]

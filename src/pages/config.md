@@ -1,0 +1,11 @@
+- pathPrefix:
+    - /experience-manager-forms-cloud-service-developer-reference/
+
+- pages:
+    - [Home](/index.md)
+    - API
+        - [Document Generation - Synchronous APIs](/api/output-sync.md)
+        - [Document Generation - Batch APIs](/api/output-batch.md)
+        - [Document Manipulation - Synchronous APIs](/api/assembler-sync.md)
+        - [Edge Deliver Services: Forms Submission Service](/api/aem-forms-submission-service.md)
+    - [Support](/support/index.md)

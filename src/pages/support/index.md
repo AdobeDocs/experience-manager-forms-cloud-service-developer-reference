@@ -3,7 +3,7 @@ title: Support - Adobe Analytics
 description: This is the support page of Adobe Analytics 
 ---
 
-<Hero slots="heading, text" background="rgb(19, 93, 183)"/>
+<Superhero slots="heading, text" background="rgb(19, 93, 183)"/>
 
 # Support
 

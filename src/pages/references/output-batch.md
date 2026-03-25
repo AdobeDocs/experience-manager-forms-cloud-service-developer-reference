@@ -1,7 +1,6 @@
 ---
 title: Communications document generation batch APIs
 description: Learn to create and run communication APIs in batch mode to generate multiple communications at scheduled intervals for printing and digital deliveries.
-openAPISpec: https://raw.githubusercontent.com/AdobeDocs/experience-manager-forms-cloud-service-developer-reference/main/src/swagger-specs/output-batch.yaml
 keywords: 
   - Experience Manager Forms Communications
   - Communications
@@ -9,3 +8,5 @@ keywords:
   - HTTP
   - REST
 --- 
+
+<RedoclyAPIBlock src="/experience-manager-forms-cloud-service-developer-reference/swagger-specs/output-batch.yaml"/>

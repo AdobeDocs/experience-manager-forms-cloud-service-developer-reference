@@ -1,3 +1,8 @@
+---
+title: Creating an OAuth Client
+description: Guide for creating an OAuth client for Adobe Analytics API access
+---
+
 # Creating an OAuth Client
 
 ## Heading A

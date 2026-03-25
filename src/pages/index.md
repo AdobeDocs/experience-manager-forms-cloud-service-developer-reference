@@ -87,7 +87,7 @@ In simple terms, the API acts as a messenger that takes the user's filled-in for
 
 Customer feedback is particularly valuable as it helps the team validate use cases, guide development, and troubleshoot issues. Comments and questions are always welcome on the [Community Forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-forms/ct-p/adobe-experience-manager-forms-community).
 
-<!-- 
+\<!-- 
 
 <Resources slots="heading, links"/>
 
@@ -131,7 +131,7 @@ Follow this tutorial to gather the required authentication credentials the Priva
     
 Follow this tutorial to gather the required authentication credentials for the Reactor API. 
 
--->
+--\>
 
 ## Discover
 

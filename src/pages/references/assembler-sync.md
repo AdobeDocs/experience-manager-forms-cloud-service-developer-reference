@@ -6,6 +6,7 @@ keywords:
   - API Documentation
   - REST
   - HTTP
+layout: none
 --- 
 
 <RedoclyAPIBlock src="/experience-manager-forms-cloud-service-developer-reference/swagger-specs/assembler-sync.yaml"/>

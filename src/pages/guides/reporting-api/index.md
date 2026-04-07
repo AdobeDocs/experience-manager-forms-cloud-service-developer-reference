@@ -17,11 +17,11 @@ Because the `/reports` endpoint uses the same API as the Analytics UI, you can c
 ## Authentication and authorization
 
 Before you can use Analytics APIs, you need to obtain authentication and receive authorization. For more information,
-see the [Get Started guide](..).
+see the [Get Started guide](../index.md).
 
 ## /reports Endpoint description
 
-The `/reports` endpoint description is shown in our [Swagger UI](../../api). Use the Swagger UI to see endpoint summaries,
+The `/reports` endpoint description is shown in our [Swagger UI](../../api/index.md). Use the Swagger UI to see endpoint summaries,
 available methods, parameters, example values, models, and status codes, and to try out the API.
 
 ## Best practises

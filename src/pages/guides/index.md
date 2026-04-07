@@ -19,7 +19,7 @@ with the analytics APIs is available in the sections below
 Use an OAuth client if you are creating an application that requires an end use to authenticate before
 calling the Adobe Analytics APIs. The OAuth tokens expire after 24 hours and the end user must then
 re-authenticate before they will be able to call the APIs. To authenticate with an OAuth client, you first
-create an OAuth client on the [Adobe I/O Console](https://console.adobe.io).
+create an OAuth client on the [Adobe I/O Console](https://developer.adobe.com/console/).
 
 <InlineAlert variant="info" slots="text"/>
 
